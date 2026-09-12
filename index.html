@@ -2,24 +2,24 @@
 <html lang="fa" dir="rtl">
 <head>
 <script>
-        !function(e,t,n){
-            e.yektanetAnalyticsObject=n,
-            e[n]=e[n]||function(){e[n].q.push(arguments)},
-            e[n].q=e[n].q||[];
-            var a=t.getElementsByTagName("head")[0],
-                r=new Date,
-                c="https://cdn.yektanet.com/superscript-v2/XcgZyRjV/native-48385/yn_pub.js?v="
-                    +r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),
-                s=t.createElement("link");
-            s.rel="preload",
-            s.as="script",
-            s.href=c,
-            a.appendChild(s);
-            var l=t.createElement("script");
-            l.async=!0,
-            l.src=c,
-            a.appendChild(l);
-        }(window,document,"yektanet");
+    !function(e,t,n){
+        e.yektanetAnalyticsObject=n,
+        e[n]=e[n]||function(){e[n].q.push(arguments)},
+        e[n].q=e[n].q||[];
+        var a=t.getElementsByTagName("head")[0],
+            r=new Date,
+            c="https://cdn.yektanet.com/superscript-v2/XcgZyRjV/native-48385/yn_pub.js?v="
+                +r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),
+            s=t.createElement("link");
+        s.rel="preload",
+        s.as="script",
+        s.href=c,
+        a.appendChild(s);
+        var l=t.createElement("script");
+        l.async=!0,
+        l.src=c,
+        a.appendChild(l);
+    }(window,document,"yektanet");
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -53,7 +53,7 @@
 }
 /* استایل جایگاه تبلیغاتی یکتانت */
 .yektanet-ad-wrapper {
-    grid-column: 1 / -1; /* تبلیغ کل عرض شبکه رو بگیره */
+    grid-column: 1 / -1;
     margin: 25px 0;
     padding: 15px;
     background: rgba(0, 255, 136, 0.05);
@@ -74,7 +74,7 @@
 دانش‌نما <b>| علم و دانش</b>
 </a>
 
-<nav>
+<nav class="menu">
 <a href="#search">جستجو</a>
 <a href="#topics">موضوعات</a>
 <a href="#categories">دسته‌ها</a>
@@ -87,11 +87,11 @@
 <main>
 
 <section class="hero">
-<div class="container">
+<div class="container hero-content">
 
 <div class="tag">نسخه ارتقایافته دانش‌نما</div>
 
-<h1>دنیای علم را <strong>کشف کن</strong></h1>
+<h1>دنیای علم را <strong class="highlight">کشف کن</strong></h1>
 
 <p>
 از فضا و سیاه‌چاله‌ها تا فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.
@@ -106,7 +106,7 @@ placeholder="سیاه‌چاله، DNA، مریخ، فیزیک کوانتومی.
 autocomplete="off"
 >
 
-<button onclick="searchSite()">جستجو</button>
+<button type="button" onclick="searchSite()">جستجو</button>
 
 </div>
 
@@ -321,7 +321,7 @@ autocomplete="off"
 
 
 <!-- کارت‌های ۱۳ تا ۲۸ (مخفی) -->
-<div class="cards" id="moreCards" style="display:none;">
+<div class="cards" id="moreCards" style="display:none; margin-top: 30px;">
 
 
 <!-- 13 -->
@@ -457,211 +457,4 @@ autocomplete="off"
 <!-- 26 -->
 <article class="card" data-cat="زیست‌شناسی">
 <img src="earth.jpg" alt="زمین" loading="lazy" onerror="this.style.display='none'">
-<span>زیست‌شناسی</span>
-<h3>زمین</h3>
-<p>سیاره‌ای که زندگی شناخته‌شده روی آن وجود دارد.</p>
-<a href="earth.html">صفحه اختصاصی ←</a>
-</article>
-
-
-<!-- 27 -->
-<article class="card" data-cat="نجوم">
-<img src="galaxies.jpg" alt="کهکشان‌ها" loading="lazy" onerror="this.style.display='none'">
-<span>نجوم</span>
-<h3>کهکشان‌ها</h3>
-<p>سامانه‌های عظیمی از ستاره‌ها، گاز، غبار و ماده تاریک.</p>
-<a href="galaxies.html">صفحه اختصاصی ←</a>
-</article>
-
-
-<!-- 28 -->
-<article class="card" data-cat="زمین‌شناسی">
-<img src="oceans.jpg" alt="اقیانوس‌ها" loading="lazy" onerror="this.style.display='none'">
-<span>زمین‌شناسی</span>
-<h3>اقیانوس‌ها</h3>
-<p>بخش بزرگی از سطح زمین را آب‌های اقیانوسی پوشانده‌اند.</p>
-<a href="oceans.html">صفحه اختصاصی ←</a>
-</article>
-
-
-</div> <!-- پایان کارت‌های ۱۳ تا ۲۸ -->
-
-
-</div>
-</div>
-</section>
-
-
-
-<section class="about">
-
-<div class="container">
-
-<h2>دانش‌نما در مسیر یک دانشنامه بزرگ</h2>
-
-<p>
-ساختار جدید جستجوی سریع، دسته‌بندی و موضوعات بیشتری دارد و می‌توانیم در مرحله بعد صدها مقاله مستقل به آن اضافه کنیم.
-</p>
-
-</div>
-
-</section>
-
-</main>
-
-
-
-<footer>
-© 2026 دانش‌نما — وب‌سایت آموزشی علم و دانش
-</footer>
-
-
-
-<script>
-
-const data = [
-
-{ title:"ویجر ۱", cat:"فضا", url:"voyager-1.html", desc:"یکی از دورترین ساخته‌های بشر و یک فضاپیمای تاریخی." },
-{ title:"ویجر ۲", cat:"فضا", url:"voyager-2.html", desc:"مأموریتی تاریخی برای بررسی مشتری، زحل، اورانوس و نپتون." },
-{ title:"سیاه‌چاله‌ها", cat:"نجوم", url:"black-holes.html", desc:"ناحیه‌هایی از فضا-زمان با گرانش بسیار شدید." },
-{ title:"ماهواره‌ها", cat:"فناوری فضایی", url:"satellites.html", desc:"برای ارتباطات، ناوبری، هواشناسی و پژوهش استفاده می‌شوند." },
-{ title:"مریخ", cat:"سیاره‌شناسی", url:"mars.html", desc:"سیاره سرخ و یکی از مهم‌ترین اهداف پژوهش‌های رباتیک." },
-{ title:"خورشید", cat:"ستاره‌شناسی", url:"sun.html", desc:"ستاره مرکزی منظومه شمسی و منبع اصلی انرژی زمین." },
-{ title:"راه شیری", cat:"کیهان‌شناسی", url:"milky-way.html", desc:"کهکشانی که منظومه شمسی در آن قرار دارد." },
-{ title:"ستاره‌ها", cat:"ستاره‌شناسی", url:"stars.html", desc:"جرم‌های درخشانی که انرژی خود را از فرایندهای هسته‌ای می‌گیرند." },
-{ title:"جیمز وب", cat:"رصدخانه فضایی", url:"webb.html", desc:"تلسکوپی فروسرخ برای مطالعه جهان دور." },
-{ title:"هابل", cat:"رصدخانه فضایی", url:"hubble.html", desc:"یکی از مشهورترین تلسکوپ‌های فضایی." },
-{ title:"ایستگاه فضایی بین‌المللی", cat:"مهندسی فضایی", url:"iss.html", desc:"آزمایشگاهی مداری برای پژوهش‌های علمی." },
-{ title:"منظومه شمسی", cat:"نجوم", url:"solar-system.html", desc:"سامانه‌ای شامل خورشید، سیارات، قمرها و اجرام کوچک‌تر." },
-{ title:"ماه", cat:"نجوم", url:"moon.html", desc:"ماه قمر طبیعی زمین است و در جزر و مد نقش دارد." },
-{ title:"اتم", cat:"فیزیک", url:"atom.html", desc:"واحد سازنده بسیاری از مواد که از هسته و الکترون‌ها تشکیل می‌شود." },
-{ title:"فیزیک کوانتومی", cat:"فیزیک", url:"quantum.html", desc:"شاخه‌ای از فیزیک برای بررسی ماده و انرژی در مقیاس بسیار کوچک." },
-{ title:"نسبیت", cat:"فیزیک", url:"relativity.html", desc:"نظریه‌هایی درباره رابطه فضا، زمان، حرکت و گرانش." },
-{ title:"نور", cat:"فیزیک", url:"light.html", desc:"نوعی تابش الکترومغناطیسی." },
-{ title:"DNA", cat:"زیست‌شناسی", url:"dna.html", desc:"مولکولی که اطلاعات ژنتیکی بسیاری از جانداران را ذخیره می‌کند." },
-{ title:"سلول", cat:"زیست‌شناسی", url:"cell.html", desc:"کوچک‌ترین واحد ساختاری و عملکردی بسیاری از جانداران." },
-{ title:"تکامل", cat:"زیست‌شناسی", url:"evolution.html", desc:"تغییرات وراثتی جمعیت‌ها در طول نسل‌ها." },
-{ title:"آتشفشان", cat:"زمین‌شناسی", url:"volcanoes.html", desc:"ساختاری که مواد داغ و گازهای درون زمین می‌توانند از آن خارج شوند." },
-{ title:"زلزله", cat:"زمین‌شناسی", url:"earthquakes.html", desc:"لرزش زمین بر اثر آزاد شدن ناگهانی انرژی." },
-{ title:"هوش مصنوعی", cat:"فناوری", url:"ai.html", desc:"روش‌هایی برای ساخت سامانه‌هایی که وظایفی مانند تشخیص الگو و پردازش زبان را انجام می‌دهند." },
-{ title:"رباتیک", cat:"فناوری", url:"robotics.html", desc:"دانش طراحی، ساخت و کنترل ربات‌ها." },
-{ title:"اینترنت", cat:"فناوری", url:"internet.html", desc:"شبکه‌ای جهانی از شبکه‌های به‌هم‌پیوسته برای تبادل داده." },
-{ title:"زمین", cat:"زمین‌شناسی", url:"earth.html", desc:"سیاره‌ای که زندگی شناخته‌شده روی آن وجود دارد." },
-{ title:"کهکشان‌ها", cat:"نجوم", url:"galaxies.html", desc:"سامانه‌های عظیمی از ستاره‌ها، گاز، غبار و ماده تاریک." },
-{ title:"اقیانوس‌ها", cat:"زمین‌شناسی", url:"oceans.html", desc:"بخش بزرگی از سطح زمین را آب‌های اقیانوسی پوشانده‌اند." }
-
-];
-
-
-const input=document.getElementById("q");
-const results=document.getElementById("results");
-
-
-function searchSite(){
-
-const q=input.value.trim().toLowerCase();
-
-results.innerHTML="";
-
-if(!q)return;
-
-
-const found=data
-.filter(x=>
-(x.title+" "+x.cat+" "+x.desc)
-.toLowerCase()
-.includes(q)
-)
-.slice(0,10);
-
-
-if(!found.length){
-
-results.innerHTML='<div class="no">نتیجه‌ای پیدا نشد.</div>';
-
-return;
-
-}
-
-
-results.innerHTML=found.map(x=>`
-
-<a class="result" href="${x.url}">
-
-<b>${x.title}</b>
-
-<small>${x.cat}</small>
-
-<span>${x.desc}</span>
-
-</a>
-
-`).join("");
-
-}
-
-
-input.addEventListener("input",searchSite);
-
-input.addEventListener("keydown",e=>{
-
-if(e.key==="Enter")
-searchSite();
-
-});
-
-
-function filter(cat){
-
-document.querySelectorAll(".card").forEach(x=>{
-
-const category=x.dataset.cat;
-
-x.style.display=
-(
-cat==="همه" ||
-category===cat ||
-(cat==="فناوری" && category==="فناوری فضایی")
-)
-?""
-:"none";
-
-});
-
-document
-.getElementById("topics")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-document
-.querySelectorAll("[data-filter]")
-.forEach(x=>
-x.addEventListener(
-"click",
-()=>filter(x.dataset.filter)
-)
-);
-
-
-// ===== دکمه مشاهده بیشتر =====
-function loadMore() {
-    const moreCards = document.getElementById('moreCards');
-    const btn = document.getElementById('loadMoreBtn');
-    
-    if (moreCards.style.display === 'none') {
-        moreCards.style.display = 'block';
-        btn.innerHTML = 'مشاهده کمتر ↑';
-        moreCards.scrollIntoView({behavior: 'smooth', block: 'start'});
-    } else {
-        moreCards.style.display = 'none';
-        btn.innerHTML = 'مشاهده بیشتر ↓';
-        document.getElementById('topics').scrollIntoView({behavior: 'smooth'});
-    }
-}
-
-</script>
-
-</body>
-            </html>
+<span>زیست
