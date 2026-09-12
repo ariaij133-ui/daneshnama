@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="دانش‌نما؛ دانشنامه فارسی علم، نجوم، فضا، فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.">
+<meta name="robots" content="index,follow">
+<title>دانش‌نما | دانشنامه علم و فضا</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="container nav"><a class="logo" href="index.html">دانش‌نما <b>| علم و دانش</b></a>
+<nav><a href="#search">جستجو</a><a href="#topics">موضوعات</a><a href="#categories">دسته‌ها</a></nav></div></header>
+<main>
+<section class="hero"><div class="container">
+<div class="tag">نسخه ارتقایافته دانش‌نما</div>
+<h1>دنیای علم را <strong>کشف کن</strong></h1>
+<p>از فضا و سیاه‌چاله‌ها تا فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.</p>
+<div class="search" id="search"><input id="q" placeholder="سیاه‌چاله، DNA، مریخ، فیزیک کوانتومی..." autocomplete="off"><button onclick="searchSite()">جستجو</button></div>
+<div id="results"></div>
+<div class="filters"><button data-filter="همه">همه</button><button data-filter="نجوم">نجوم</button><button data-filter="فیزیک">فیزیک</button><button data-filter="زیست‌شناسی">زیست‌شناسی</button><button data-filter="زمین‌شناسی">زمین‌شناسی</button><button data-filter="فناوری">فناوری</button></div>
+</div></section>
+<section id="categories" class="categories"><div class="container"><h2>دسته‌های علمی</h2>
+<div class="categoryGrid"><button data-filter="نجوم">🌌 نجوم و کیهان</button><button data-filter="فیزیک">⚛️ فیزیک</button><button data-filter="زیست‌شناسی">🧬 زیست‌شناسی</button><button data-filter="زمین‌شناسی">🌍 زمین‌شناسی</button><button data-filter="فناوری">🤖 فناوری</button><button data-filter="فضا">🚀 فضا</button></div></div></section>
+<section id="topics"><div class="container"><div class="head"><h2>موضوعات علمی</h2><p>صفحات قبلی دانش‌نما حفظ شده‌اند و مطالب جدید هم به آن اضافه شده است.</p></div>
+<div class="cards"><article class="card" data-cat="فضا"><span>فضا</span><h3>ویجر ۱</h3><p>یکی از دورترین ساخته‌های بشر و یک فضاپیمای تاریخی.</p><a href="#topics">صفحه اختصاصی ←</a></article><article class="card" data-cat="فضا"><span>فضا</span><h3>ویجر ۲</h3><p>مأموریتی تاریخی برای بررسی مشتری، زحل، اورانوس و نپتون.</p><a href="#topics">صفحه اختصاصی ←</a></article><article class="card" data-cat="نجوم"><span>نجوم</span><h3>سیاه‌چاله‌ها</h3><p>ناحیه‌هایی از فضا-زمان با گرانش بسیار شدید.</p><a href="#topics">صفحه اختصاصی ←</a></article><article class="card" data-cat="فناوری فضایی"><span>فناوری فضایی</span><h3>ماهواره‌ها</h3><p>برای ارتباطات، ناوبری، هواشناسی و پژوهش استفاده می‌شوند.</p><a href="satellites.html">صفحه اختصاصی ←</a></article><article class="card" data-cat="سیاره‌شناسی"><span>سیاره‌شناسی</span><h3>مریخ</h3><p>سیاره سرخ و یکی از مهم‌ترین اهداف پژوهش‌های رباتیک.</p><a href="mars.html">صفحه اختصاصی ←</a></article><article class="card" data-cat="ستاره‌شناسی"><span>ستاره‌شناسی</span><h3>خورشید</h3><p>ستاره مرکزی منظومه شمسی و منبع اصلی انرژی زمین.</p><a href="sun.html">صفحه اختصاصی ←</a></article><article class="card" data-cat="کیهان‌شناسی"><span>کیهان‌شناسی</span><h3>راه شیری</h3><p>کهکشانی که منظومه شمسی در آن قرار دارد.</p><a href="#topics">صفحه اختصاصی ←</a></article><article class="card" data-cat="ستاره‌شناسی"><span>ستاره‌شناسی</span><h3>ستاره‌ها</h3><p>جرم‌های درخشانی که انرژی خود را از فرایندهای هسته‌ای می‌گیرند.</p><a href="stars.html">صفحه اختصاصی ←</a></article><article class="card" data-cat="رصدخانه فضایی"><span>رصدخانه فضایی</span><h3>جیمز وب</h3><p>تلسکوپی فروسرخ برای مطالعه جهان دور.</p><a href="#topics">صفحه اختصاصی ←</a></article><article class="card" data-cat="رصدخانه فضایی"><span>رصدخانه فضایی</span><h3>هابل</h3><p>یکی از مشهورترین تلسکوپ‌های فضایی.</p><a href="#topics">صفحه اختصاصی ←</a></article><article class="card" data-cat="مهندسی فضایی"><span>مهندسی فضایی</span><h3>ایستگاه فضایی بین‌المللی</h3><p>آزمایشگاهی مداری برای پژوهش‌های علمی.</p><a href="iss.html">صفحه اختصاصی ←</a></article><article class="card" data-cat="نجوم"><span>نجوم</span><h3>منظومه شمسی</h3><p>سامانه‌ای شامل خورشید، سیارات، قمرها و اجرام کوچک‌تر.</p><a href="solar-system.html">صفحه اختصاصی ←</a></article><article class="card" data-cat="نجوم"><span>نجوم</span><h3>ماه</h3><p>ماه قمر طبیعی زمین است و در جزر و مد نقش دارد.</p><button onclick="openExtra(0)">مطالعه مطلب ←</button></article><article class="card" data-cat="نجوم"><span>نجوم</span><h3>سیارات فراخورشیدی</h3><p>سیاراتی که به دور ستاره‌هایی خارج از منظومه شمسی می‌گردند.</p><button onclick="openExtra(1)">مطالعه مطلب ←</button></article><article class="card" data-cat="نجوم"><span>نجوم</span><h3>ابرنواختر</h3><p>انفجار بسیار پرانرژی برخی ستاره‌ها در پایان مرحله‌ای از زندگی آن‌ها.</p><button onclick="openExtra(2)">مطالعه مطلب ←</button></article><article class="card" data-cat="کیهان‌شناسی"><span>کیهان‌شناسی</span><h3>ماده تاریک</h3><p>نامی برای ماده‌ای نامرئی که اثر گرانشی آن مشاهده می‌شود.</p><button onclick="openExtra(3)">مطالعه مطلب ←</button></article><article class="card" data-cat="فیزیک"><span>فیزیک</span><h3>اتم</h3><p>واحد سازنده بسیاری از مواد که از هسته و الکترون‌ها تشکیل می‌شود.</p><button onclick="openExtra(4)">مطالعه مطلب ←</button></article><article class="card" data-cat="فیزیک"><span>فیزیک</span><h3>فیزیک کوانتومی</h3><p>شاخه‌ای از فیزیک برای بررسی ماده و انرژی در مقیاس بسیار کوچک.</p><button onclick="openExtra(5)">مطالعه مطلب ←</button></article><article class="card" data-cat="فیزیک"><span>فیزیک</span><h3>نسبیت</h3><p>نظریه‌هایی درباره رابطه فضا، زمان، حرکت و گرانش.</p><button onclick="openExtra(6)">مطالعه مطلب ←</button></article><article class="card" data-cat="فیزیک"><span>فیزیک</span><h3>نور</h3><p>نوعی تابش الکترومغناطیسی.</p><button onclick="openExtra(7)">مطالعه مطلب ←</button></article><article class="card" data-cat="فیزیک"><span>فیزیک</span><h3>الکتریسیته</h3><p>پدیده‌های مربوط به بارهای الکتریکی و حرکت آن‌ها.</p><button onclick="openExtra(8)">مطالعه مطلب ←</button></article><article class="card" data-cat="زیست‌شناسی"><span>زیست‌شناسی</span><h3>DNA</h3><p>مولکولی که اطلاعات ژنتیکی بسیاری از جانداران را ذخیره می‌کند.</p><button onclick="openExtra(9)">مطالعه مطلب ←</button></article><article class="card" data-cat="زیست‌شناسی"><span>زیست‌شناسی</span><h3>سلول</h3><p>کوچک‌ترین واحد ساختاری و عملکردی بسیاری از جانداران.</p><button onclick="openExtra(10)">مطالعه مطلب ←</button></article><article class="card" data-cat="زیست‌شناسی"><span>زیست‌شناسی</span><h3>تکامل</h3><p>تغییرات وراثتی جمعیت‌ها در طول نسل‌ها.</p><button onclick="openExtra(11)">مطالعه مطلب ←</button></article><article class="card" data-cat="زیست‌شناسی"><span>زیست‌شناسی</span><h3>فتوسنتز</h3><p>فرایندی که در آن گیاهان با استفاده از نور انرژی شیمیایی تولید می‌کنند.</p><button onclick="openExtra(12)">مطالعه مطلب ←</button></article><article class="card" data-cat="زمین‌شناسی"><span>زمین‌شناسی</span><h3>آتشفشان</h3><p>ساختاری که مواد داغ و گازهای درون زمین می‌توانند از آن خارج شوند.</p><button onclick="openExtra(13)">مطالعه مطلب ←</button></article><article class="card" data-cat="زمین‌شناسی"><span>زمین‌شناسی</span><h3>زلزله</h3><p>لرزش زمین بر اثر آزاد شدن ناگهانی انرژی.</p><button onclick="openExtra(14)">مطالعه مطلب ←</button></article><article class="card" data-cat="فناوری"><span>فناوری</span><h3>هوش مصنوعی</h3><p>روش‌هایی برای ساخت سامانه‌هایی که وظایفی مانند تشخیص الگو و پردازش زبان را انجام می‌دهند.</p><button onclick="openExtra(15)">مطالعه مطلب ←</button></article><article class="card" data-cat="فناوری"><span>فناوری</span><h3>رباتیک</h3><p>دانش طراحی، ساخت و کنترل ربات‌ها.</p><button onclick="openExtra(16)">مطالعه مطلب ←</button></article><article class="card" data-cat="فناوری"><span>فناوری</span><h3>اینترنت</h3><p>شبکه‌ای جهانی از شبکه‌های به‌هم‌پیوسته برای تبادل داده.</p><button onclick="openExtra(17)">مطالعه مطلب ←</button></article></div></div></section>
+<section class="about"><div class="container"><h2>دانش‌نما در مسیر یک دانشنامه بزرگ</h2><p>ساختار جدید جستجوی سریع، دسته‌بندی و موضوعات بیشتری دارد و می‌توانیم در مرحله بعد صدها مقاله مستقل به آن اضافه کنیم.</p></div></section>
+</main>
+<div class="modal" id="modal"><div class="modalBox"><button onclick="closeModal()">×</button><div id="article"></div></div></div>
+<footer>© 2026 دانش‌نما — وب‌سایت آموزشی علم و دانش</footer>
+<script>
+const data = [
+{"title":"ویجر ۱","cat":"فضا","url":"","desc":"یکی از دورترین ساخته‌های بشر و یک فضاپیمای تاریخی."},
+{"title":"ویجر ۲","cat":"فضا","url":"","desc":"مأموریتی تاریخی برای بررسی مشتری، زحل، اورانوس و نپتون."},
+{"title":"سیاه‌چاله‌ها","cat":"نجوم","url":"","desc":"ناحیه‌هایی از فضا-زمان با گرانش بسیار شدید."},
+{"title":"ماهواره‌ها","cat":"فناوری فضایی","url":"satellites.html","desc":"برای ارتباطات، ناوبری، هواشناسی و پژوهش استفاده می‌شوند."},
+{"title":"مریخ","cat":"سیاره‌شناسی","url":"mars.html","desc":"سیاره سرخ و یکی از مهم‌ترین اهداف پژوهش‌های رباتیک."},
+{"title":"خورشید","cat":"ستاره‌شناسی","url":"sun.html","desc":"ستاره مرکزی منظومه شمسی و منبع اصلی انرژی زمین."},
+{"title":"راه شیری","cat":"کیهان‌شناسی","url":"","desc":"کهکشانی که منظومه شمسی در آن قرار دارد."},
+{"title":"ستاره‌ها","cat":"ستاره‌شناسی","url":"stars.html","desc":"جرم‌های درخشانی که انرژی خود را از فرایندهای هسته‌ای می‌گیرند."},
+{"title":"جیمز وب","cat":"رصدخانه فضایی","url":"","desc":"تلسکوپی فروسرخ برای مطالعه جهان دور."},
+{"title":"هابل","cat":"رصدخانه فضایی","url":"","desc":"یکی از مشهورترین تلسکوپ‌های فضایی."},
+{"title":"ایستگاه فضایی بین‌المللی","cat":"مهندسی فضایی","url":"iss.html","desc":"آزمایشگاهی مداری برای پژوهش‌های علمی."},
+{"title":"منظومه شمسی","cat":"نجوم","url":"solar-system.html","desc":"سامانه‌ای شامل خورشید، سیارات، قمرها و اجرام کوچک‌تر."},
+{"title":"ماه","cat":"نجوم","url":"","desc":"ماه قمر طبیعی زمین است و در جزر و مد نقش دارد."},
+{"title":"سیارات فراخورشیدی","cat":"نجوم","url":"","desc":"سیاراتی که به دور ستاره‌هایی خارج از منظومه شمسی می‌گردند."},
+{"title":"ابرنواختر","cat":"نجوم","url":"","desc":"انفجار بسیار پرانرژی برخی ستاره‌ها در پایان مرحله‌ای از زندگی آن‌ها."},
+{"title":"ماده تاریک","cat":"کیهان‌شناسی","url":"","desc":"نامی برای ماده‌ای نامرئی که اثر گرانشی آن مشاهده می‌شود."},
+{"title":"اتم","cat":"فیزیک","url":"","desc":"واحد سازنده بسیاری از مواد که از هسته و الکترون‌ها تشکیل می‌شود."},
+{"title":"فیزیک کوانتومی","cat":"فیزیک","url":"","desc":"شاخه‌ای از فیزیک برای بررسی ماده و انرژی در مقیاس بسیار کوچک."},
+{"title":"نسبیت","cat":"فیزیک","url":"","desc":"نظریه‌هایی درباره رابطه فضا، زمان، حرکت و گرانش."},
+{"title":"نور","cat":"فیزیک","url":"","desc":"نوعی تابش الکترومغناطیسی."},
+{"title":"الکتریسیته","cat":"فیزیک","url":"","desc":"پدیده‌های مربوط به بارهای الکتریکی و حرکت آن‌ها."},
+{"title":"DNA","cat":"زیست‌شناسی","url":"","desc":"مولکولی که اطلاعات ژنتیکی بسیاری از جانداران را ذخیره می‌کند."},
+{"title":"سلول","cat":"زیست‌شناسی","url":"","desc":"کوچک‌ترین واحد ساختاری و عملکردی بسیاری از جانداران."},
+{"title":"تکامل","cat":"زیست‌شناسی","url":"","desc":"تغییرات وراثتی جمعیت‌ها در طول نسل‌ها."},
+{"title":"فتوسنتز","cat":"زیست‌شناسی","url":"","desc":"فرایندی که در آن گیاهان با استفاده از نور انرژی شیمیایی تولید می‌کنند."},
+{"title":"آتشفشان","cat":"زمین‌شناسی","url":"","desc":"ساختاری که مواد داغ و گازهای درون زمین می‌توانند از آن خارج شوند."},
+{"title":"زلزله","cat":"زمین‌شناسی","url":"","desc":"لرزش زمین بر اثر آزاد شدن ناگهانی انرژی."},
+{"title":"هوش مصنوعی","cat":"فناوری","url":"","desc":"روش‌هایی برای ساخت سامانه‌هایی که وظایفی مانند تشخیص الگو و پردازش زبان را انجام می‌دهند."},
+{"title":"رباتیک","cat":"فناوری","url":"","desc":"دانش طراحی، ساخت و کنترل ربات‌ها."},
+{"title":"اینترنت","cat":"فناوری","url":"","desc":"شبکه‌ای جهانی از شبکه‌های به‌هم‌پیوسته برای تبادل داده."}
+];
+
+function normalize(text) {
+    return String(text || "")
+        .toLowerCase()
+        .replace(/[يى]/g, "ی")
+        .replace(/ك/g, "ک")
+        .replace(/[ۀة]/g, "ه")
+        .replace(/[إأآ]/g, "ا")
+        .replace(/\u200c/g, " ")
+        .replace(/ـ/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function safe(text) {
+    return String(text).replace(/[&<>"']/g, function(ch) {
+        return {
+            "&":"&amp;",
+            "<":"&lt;",
+            ">":"&gt;",
+            '"':"&quot;",
+            "'":"&#039;"
+        }[ch];
+    });
+}
+
+function searchSite() {
+    const input = document.getElementById("q");
+    const results = document.getElementById("results");
+    const query = normalize(input.value);
+
+    results.innerHTML = "";
+
+    if (!query) {
+        return;
+    }
+
+    const words = query.split(" ").filter(Boolean);
+
+    const found = data.filter(function(item) {
+        const text = normalize(
+            item.title + " " + item.cat + " " + item.desc
+        );
+
+        return words.every(function(word) {
+            return text.includes(word);
+        });
+    });
+
+    if (found.length === 0) {
+        results.innerHTML =
+            '<div class="no-result">نتیجه‌ای برای «' +
+            safe(input.value) +
+            '» پیدا نشد.</div>';
+        return;
+    }
+
+    found.forEach(function(item) {
+        const box = document.createElement("div");
+        box.className = "result";
+
+        box.innerHTML =
+            '<b>' + safe(item.title) + '</b>' +
+            '<small>' + safe(item.cat) + '</small>' +
+            '<span>' + safe(item.desc) + '</span>';
+
+        if (item.url) {
+            box.style.cursor = "pointer";
+            box.onclick = function() {
+                window.location.href = item.url;
+            };
+        }
+
+        results.appendChild(box);
+    });
+}
+
+document.getElementById("q").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        searchSite();
+    }
+});
+
+document.getElementById("q").addEventListener("input", searchSite);
+
+document.querySelectorAll("[data-filter]").forEach(function(button) {
+    button.addEventListener("click", function() {
+        const filter = button.dataset.filter;
+
+        document.querySelectorAll(".card").forEach(function(card) {
+            const cat = card.dataset.cat;
+            card.style.display =
+                filter === "همه" ||
+                cat === filter ||
+                (filter === "فضا" && cat === "فناوری فضایی")
+                    ? ""
+                    : "none";
+        });
+    });
+});
+
+function openExtra(index) {
+    const item = data[index];
+    const article = document.getElementById("article");
+    const modal = document.getElementById("modal");
+
+    if (!item || !article || !modal) return;
+
+    article.innerHTML =
+        "<h2>" + safe(item.title) + "</h2>" +
+        "<p><strong>دسته:</strong> " + safe(item.cat) + "</p>" +
+        "<p>" + safe(item.desc) + "</p>";
+
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    if (modal) modal.style.display = "none";
+}
+</script>
+</body></html>
