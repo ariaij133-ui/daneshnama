@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>دانش‌نما | علم و فضا</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="index.html"><span class="blue">دانش‌نما</span> | <span class="dark">علم و فضا</span></a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="pill">دانشنامه علم و فضا</div>
+  <h1>هر موضوع، یک <span class="accent">صفحه اختصاصی</span></h1>
+  <p>دانش‌نما مطالب علمی و آموزشی را در صفحه‌های اختصاصی ارائه می‌کند؛ از ویجر و سیاه‌چاله‌ها تا مریخ، خورشید، ماهواره‌ها و فناوری.</p>
+  <a class="main-button" href="#topics">مشاهده موضوعات</a>
+</section>
+
+<section class="search-wrap" id="search">
+  <div class="search-box">
+    <h2>جستجو در دانش‌نما</h2>
+    <div class="search-row">
+      <input id="searchInput" type="search" placeholder="مثلاً: سیاه‌چاله، مریخ، DNA، گرانش..." autocomplete="off">
+      <button type="button" onclick="searchArticles(document.getElementById('searchInput').value)">جستجو</button>
+    </div>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</section>
+
+<section class="section" id="topics">
+  <div class="section-title">
+    <h2>موضوعات علمی</h2>
+    <p>هر مقاله صفحه جداگانه خودش را در همین سایت دارد.</p>
+  </div>
+  <div class="grid"><article class="card">
+  <div class="category">فضا</div>
+  <h3>سیاه‌چاله‌ها</h3>
+  <p>سیاه‌چاله‌ها اجرام کیهانی بسیار فشرده‌ای هستند که میدان گرانشی بسیار شدیدی دارند.</p>
+  <a class="read" href="black-holes.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">نجوم</div>
+  <h3>تلسکوپ هابل</h3>
+  <p>تلسکوپ فضایی هابل یکی از شناخته‌شده‌ترین رصدخانه‌های فضایی برای مطالعه جهان است.</p>
+  <a class="read" href="hubble.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">فضا</div>
+  <h3>ایستگاه فضایی بین‌المللی</h3>
+  <p>ایستگاه فضایی بین‌المللی یک آزمایشگاه پژوهشی در مدار زمین است.</p>
+  <a class="read" href="iss.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">فضا</div>
+  <h3>مریخ</h3>
+  <p>مریخ چهارمین سیاره از خورشید و یکی از مهم‌ترین مقصدهای پژوهش‌های سیاره‌ای است.</p>
+  <a class="read" href="mars.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">نجوم</div>
+  <h3>راه شیری</h3>
+  <p>راه شیری کهکشانی است که منظومه شمسی در یکی از بازوهای آن قرار دارد.</p>
+  <a class="read" href="milky-way.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">فناوری</div>
+  <h3>ماهواره‌ها</h3>
+  <p>ماهواره‌ها ابزارهایی هستند که برای پژوهش، ارتباطات، ناوبری و مشاهده زمین به کار می‌روند.</p>
+  <a class="read" href="satellites.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">نجوم</div>
+  <h3>منظومه شمسی</h3>
+  <p>منظومه شمسی شامل خورشید و مجموعه‌ای از سیارات، قمرها و اجرام کوچک‌تر است.</p>
+  <a class="read" href="solar-system.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">نجوم</div>
+  <h3>ستاره‌ها</h3>
+  <p>ستاره‌ها اجرامی درخشان‌اند که انرژی خود را از فرایندهای هسته‌ای درونشان به دست می‌آورند.</p>
+  <a class="read" href="stars.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">نجوم</div>
+  <h3>خورشید</h3>
+  <p>خورشید ستاره‌ای است که مرکز منظومه شمسی را تشکیل می‌دهد و منبع اصلی انرژی زمین است.</p>
+  <a class="read" href="sun.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">فضا</div>
+  <h3>ویجر ۱</h3>
+  <p>ویجر ۱ یکی از فضاپیماهای دوردست بشر است که برای مطالعه مشتری و زحل پرتاب شد.</p>
+  <a class="read" href="voyager-1.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">فضا</div>
+  <h3>ویجر ۲</h3>
+  <p>ویجر ۲ مأموریتی تاریخی برای بررسی چند سیاره غول‌پیکر منظومه شمسی انجام داد.</p>
+  <a class="read" href="voyager-2.html">خواندن مقاله ←</a>
+</article>
+<article class="card">
+  <div class="category">نجوم</div>
+  <h3>تلسکوپ جیمز وب</h3>
+  <p>تلسکوپ فضایی جیمز وب برای مطالعه جهان دوردست، ستاره‌ها، کهکشان‌ها و جو برخی سیارات طراحی شده است.</p>
+  <a class="read" href="webb.html">خواندن مقاله ←</a>
+</article></div>
+</section>
+</main>
+
+<footer class="footer">دانش‌نما | دانش برای همه</footer>
+<script>
+const articles = [{"file": "black-holes.html", "title": "سیاه‌چاله‌ها", "category": "فضا", "description": "سیاه‌چاله‌ها اجرام کیهانی بسیار فشرده‌ای هستند که میدان گرانشی بسیار شدیدی دارند."}, {"file": "hubble.html", "title": "تلسکوپ هابل", "category": "نجوم", "description": "تلسکوپ فضایی هابل یکی از شناخته‌شده‌ترین رصدخانه‌های فضایی برای مطالعه جهان است."}, {"file": "iss.html", "title": "ایستگاه فضایی بین‌المللی", "category": "فضا", "description": "ایستگاه فضایی بین‌المللی یک آزمایشگاه پژوهشی در مدار زمین است."}, {"file": "mars.html", "title": "مریخ", "category": "فضا", "description": "مریخ چهارمین سیاره از خورشید و یکی از مهم‌ترین مقصدهای پژوهش‌های سیاره‌ای است."}, {"file": "milky-way.html", "title": "راه شیری", "category": "نجوم", "description": "راه شیری کهکشانی است که منظومه شمسی در یکی از بازوهای آن قرار دارد."}, {"file": "satellites.html", "title": "ماهواره‌ها", "category": "فناوری", "description": "ماهواره‌ها ابزارهایی هستند که برای پژوهش، ارتباطات، ناوبری و مشاهده زمین به کار می‌روند."}, {"file": "solar-system.html", "title": "منظومه شمسی", "category": "نجوم", "description": "منظومه شمسی شامل خورشید و مجموعه‌ای از سیارات، قمرها و اجرام کوچک‌تر است."}, {"file": "stars.html", "title": "ستاره‌ها", "category": "نجوم", "description": "ستاره‌ها اجرامی درخشان‌اند که انرژی خود را از فرایندهای هسته‌ای درونشان به دست می‌آورند."}, {"file": "sun.html", "title": "خورشید", "category": "نجوم", "description": "خورشید ستاره‌ای است که مرکز منظومه شمسی را تشکیل می‌دهد و منبع اصلی انرژی زمین است."}, {"file": "voyager-1.html", "title": "ویجر ۱", "category": "فضا", "description": "ویجر ۱ یکی از فضاپیماهای دوردست بشر است که برای مطالعه مشتری و زحل پرتاب شد."}, {"file": "voyager-2.html", "title": "ویجر ۲", "category": "فضا", "description": "ویجر ۲ مأموریتی تاریخی برای بررسی چند سیاره غول‌پیکر منظومه شمسی انجام داد."}, {"file": "webb.html", "title": "تلسکوپ جیمز وب", "category": "نجوم", "description": "تلسکوپ فضایی جیمز وب برای مطالعه جهان دوردست، ستاره‌ها، کهکشان‌ها و جو برخی سیارات طراحی شده است."}];
+function searchArticles(value){
+  const box=document.getElementById("searchResults");
+  const q=value.trim().toLowerCase();
+  if(!q){box.innerHTML="";return;}
+  const found=articles.filter(a=>
+    (a.title+" "+a.category+" "+a.description).toLowerCase().includes(q)
+  );
+  box.innerHTML=found.length
+    ? found.map(a=>`<a class="result" href="${a.file}"><b>${a.title}</b><small>${a.category}</small></a>`).join("")
+    : '<div class="result">مقاله‌ای با این عبارت پیدا نشد.</div>';
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  const input=document.getElementById("searchInput");
+  input.addEventListener("input",e=>searchArticles(e.target.value));
+  input.addEventListener("keydown",e=>{if(e.key==="Enter") searchArticles(input.value)});
+});
+</script>
+</body>
+</html>
