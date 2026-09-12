@@ -10,6 +10,22 @@
 <title>دانش‌نما | دانشنامه علم و فضا</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* ===== استایل اختصاصی تصاویر کارت‌ها ===== */
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover; /* عکس رو برش می‌ده تا کامل کارت رو پر کنه */
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    transition: transform 0.3s ease;
+}
+.card:hover img {
+    transform: scale(1.03); /* زوم ملایم روی عکس موقع هاور */
+}
+</style>
 </head>
 
 <body>
@@ -119,6 +135,7 @@ autocomplete="off"
 
 <!-- 1 -->
 <article class="card" data-cat="فضا">
+<img src="voyager-1.jpg" alt="ویجر ۱" loading="lazy">
 <span>فضا</span>
 <h3>ویجر ۱</h3>
 <p>یکی از دورترین ساخته‌های بشر و یک فضاپیمای تاریخی.</p>
@@ -128,6 +145,7 @@ autocomplete="off"
 
 <!-- 2 -->
 <article class="card" data-cat="فضا">
+<img src="voyager-2.jpg" alt="ویجر ۲" loading="lazy">
 <span>فضا</span>
 <h3>ویجر ۲</h3>
 <p>مأموریتی تاریخی برای بررسی مشتری، زحل، اورانوس و نپتون.</p>
@@ -137,6 +155,7 @@ autocomplete="off"
 
 <!-- 3 -->
 <article class="card" data-cat="نجوم">
+<img src="black-holes.jpg" alt="سیاه‌چاله‌ها" loading="lazy">
 <span>نجوم</span>
 <h3>سیاه‌چاله‌ها</h3>
 <p>ناحیه‌هایی از فضا-زمان با گرانش بسیار شدید.</p>
@@ -146,6 +165,7 @@ autocomplete="off"
 
 <!-- 4 -->
 <article class="card" data-cat="فناوری">
+<img src="satellites.jpg" alt="ماهواره‌ها" loading="lazy">
 <span>فناوری فضایی</span>
 <h3>ماهواره‌ها</h3>
 <p>برای ارتباطات، ناوبری، هواشناسی و پژوهش استفاده می‌شوند.</p>
@@ -155,6 +175,7 @@ autocomplete="off"
 
 <!-- 5 -->
 <article class="card" data-cat="نجوم">
+<img src="mars.jpg" alt="مریخ" loading="lazy">
 <span>سیاره‌شناسی</span>
 <h3>مریخ</h3>
 <p>سیاره سرخ و یکی از مهم‌ترین اهداف پژوهش‌های رباتیک.</p>
@@ -164,6 +185,7 @@ autocomplete="off"
 
 <!-- 6 -->
 <article class="card" data-cat="نجوم">
+<img src="sun.jpg" alt="خورشید" loading="lazy">
 <span>ستاره‌شناسی</span>
 <h3>خورشید</h3>
 <p>ستاره مرکزی منظومه شمسی و منبع اصلی انرژی زمین.</p>
@@ -173,6 +195,7 @@ autocomplete="off"
 
 <!-- 7 -->
 <article class="card" data-cat="نجوم">
+<img src="milky-way.jpg" alt="راه شیری" loading="lazy">
 <span>کیهان‌شناسی</span>
 <h3>راه شیری</h3>
 <p>کهکشانی که منظومه شمسی در آن قرار دارد.</p>
@@ -182,6 +205,7 @@ autocomplete="off"
 
 <!-- 8 -->
 <article class="card" data-cat="نجوم">
+<img src="stars.jpg" alt="ستاره‌ها" loading="lazy">
 <span>ستاره‌شناسی</span>
 <h3>ستاره‌ها</h3>
 <p>جرم‌های درخشانی که انرژی خود را از فرایندهای هسته‌ای می‌گیرند.</p>
@@ -191,6 +215,7 @@ autocomplete="off"
 
 <!-- 9 -->
 <article class="card" data-cat="فضا">
+<img src="webb.jpg" alt="جیمز وب" loading="lazy">
 <span>رصدخانه فضایی</span>
 <h3>جیمز وب</h3>
 <p>تلسکوپی فروسرخ برای مطالعه جهان دور.</p>
@@ -200,6 +225,7 @@ autocomplete="off"
 
 <!-- 10 -->
 <article class="card" data-cat="فضا">
+<img src="hubble.jpg" alt="هابل" loading="lazy">
 <span>رصدخانه فضایی</span>
 <h3>هابل</h3>
 <p>یکی از مشهورترین تلسکوپ‌های فضایی.</p>
@@ -209,6 +235,7 @@ autocomplete="off"
 
 <!-- 11 -->
 <article class="card" data-cat="فضا">
+<img src="iss.jpg" alt="ایستگاه فضایی بین‌المللی" loading="lazy">
 <span>مهندسی فضایی</span>
 <h3>ایستگاه فضایی بین‌المللی</h3>
 <p>آزمایشگاهی مداری برای پژوهش‌های علمی.</p>
@@ -218,6 +245,7 @@ autocomplete="off"
 
 <!-- 12 -->
 <article class="card" data-cat="نجوم">
+<img src="solar-system.jpg" alt="منظومه شمسی" loading="lazy">
 <span>نجوم</span>
 <h3>منظومه شمسی</h3>
 <p>سامانه‌ای شامل خورشید، سیارات، قمرها و اجرام کوچک‌تر.</p>
@@ -227,6 +255,7 @@ autocomplete="off"
 
 <!-- 13 -->
 <article class="card" data-cat="نجوم">
+<img src="moon.jpg" alt="ماه" loading="lazy">
 <span>نجوم</span>
 <h3>ماه</h3>
 <p>ماه قمر طبیعی زمین است و در جزر و مد نقش دارد.</p>
@@ -236,6 +265,7 @@ autocomplete="off"
 
 <!-- 14 -->
 <article class="card" data-cat="فیزیک">
+<img src="atom.jpg" alt="اتم" loading="lazy">
 <span>فیزیک</span>
 <h3>اتم</h3>
 <p>واحد سازنده بسیاری از مواد که از هسته و الکترون‌ها تشکیل می‌شود.</p>
@@ -245,6 +275,7 @@ autocomplete="off"
 
 <!-- 15 -->
 <article class="card" data-cat="فیزیک">
+<img src="quantum.jpg" alt="فیزیک کوانتومی" loading="lazy">
 <span>فیزیک</span>
 <h3>فیزیک کوانتومی</h3>
 <p>شاخه‌ای از فیزیک برای بررسی ماده و انرژی در مقیاس بسیار کوچک.</p>
@@ -254,6 +285,7 @@ autocomplete="off"
 
 <!-- 16 -->
 <article class="card" data-cat="فیزیک">
+<img src="relativity.jpg" alt="نسبیت" loading="lazy">
 <span>فیزیک</span>
 <h3>نسبیت</h3>
 <p>نظریه‌هایی درباره رابطه فضا، زمان، حرکت و گرانش.</p>
@@ -263,6 +295,7 @@ autocomplete="off"
 
 <!-- 17 -->
 <article class="card" data-cat="فیزیک">
+<img src="light.jpg" alt="نور" loading="lazy">
 <span>فیزیک</span>
 <h3>نور</h3>
 <p>نوعی تابش الکترومغناطیسی.</p>
@@ -272,6 +305,7 @@ autocomplete="off"
 
 <!-- 18 -->
 <article class="card" data-cat="زیست‌شناسی">
+<img src="dna.jpg" alt="DNA" loading="lazy">
 <span>زیست‌شناسی</span>
 <h3>DNA</h3>
 <p>مولکولی که اطلاعات ژنتیکی بسیاری از جانداران را ذخیره می‌کند.</p>
@@ -281,6 +315,7 @@ autocomplete="off"
 
 <!-- 19 -->
 <article class="card" data-cat="زیست‌شناسی">
+<img src="cell.jpg" alt="سلول" loading="lazy">
 <span>زیست‌شناسی</span>
 <h3>سلول</h3>
 <p>کوچک‌ترین واحد ساختاری و عملکردی بسیاری از جانداران.</p>
@@ -290,6 +325,7 @@ autocomplete="off"
 
 <!-- 20 -->
 <article class="card" data-cat="زیست‌شناسی">
+<img src="evolution.jpg" alt="تکامل" loading="lazy">
 <span>زیست‌شناسی</span>
 <h3>تکامل</h3>
 <p>تغییرات وراثتی جمعیت‌ها در طول نسل‌ها.</p>
@@ -299,6 +335,7 @@ autocomplete="off"
 
 <!-- 21 -->
 <article class="card" data-cat="زمین‌شناسی">
+<img src="volcanoes.jpg" alt="آتشفشان" loading="lazy">
 <span>زمین‌شناسی</span>
 <h3>آتشفشان</h3>
 <p>ساختاری که مواد داغ و گازهای درون زمین می‌توانند از آن خارج شوند.</p>
@@ -308,6 +345,7 @@ autocomplete="off"
 
 <!-- 22 -->
 <article class="card" data-cat="زمین‌شناسی">
+<img src="earthquakes.jpg" alt="زلزله" loading="lazy">
 <span>زمین‌شناسی</span>
 <h3>زلزله</h3>
 <p>لرزش زمین بر اثر آزاد شدن ناگهانی انرژی.</p>
@@ -317,6 +355,7 @@ autocomplete="off"
 
 <!-- 23 -->
 <article class="card" data-cat="فناوری">
+<img src="ai.jpg" alt="هوش مصنوعی" loading="lazy">
 <span>فناوری</span>
 <h3>هوش مصنوعی</h3>
 <p>روش‌هایی برای ساخت سامانه‌هایی که وظایفی مانند تشخیص الگو و پردازش زبان را انجام می‌دهند.</p>
@@ -326,6 +365,7 @@ autocomplete="off"
 
 <!-- 24 -->
 <article class="card" data-cat="فناوری">
+<img src="robotics.jpg" alt="رباتیک" loading="lazy">
 <span>فناوری</span>
 <h3>رباتیک</h3>
 <p>دانش طراحی، ساخت و کنترل ربات‌ها.</p>
@@ -335,6 +375,7 @@ autocomplete="off"
 
 <!-- 25 -->
 <article class="card" data-cat="فناوری">
+<img src="internet.jpg" alt="اینترنت" loading="lazy">
 <span>فناوری</span>
 <h3>اینترنت</h3>
 <p>شبکه‌ای جهانی از شبکه‌های به‌هم‌پیوسته برای تبادل داده.</p>
@@ -344,6 +385,7 @@ autocomplete="off"
 
 <!-- 26 -->
 <article class="card" data-cat="زیست‌شناسی">
+<img src="earth.jpg" alt="زمین" loading="lazy">
 <span>زیست‌شناسی</span>
 <h3>زمین</h3>
 <p>سیاره‌ای که زندگی شناخته‌شده روی آن وجود دارد.</p>
@@ -353,6 +395,7 @@ autocomplete="off"
 
 <!-- 27 -->
 <article class="card" data-cat="نجوم">
+<img src="galaxies.jpg" alt="کهکشان‌ها" loading="lazy">
 <span>نجوم</span>
 <h3>کهکشان‌ها</h3>
 <p>سامانه‌های عظیمی از ستاره‌ها، گاز، غبار و ماده تاریک.</p>
@@ -362,6 +405,7 @@ autocomplete="off"
 
 <!-- 28 -->
 <article class="card" data-cat="زمین‌شناسی">
+<img src="oceans.jpg" alt="اقیانوس‌ها" loading="lazy">
 <span>زمین‌شناسی</span>
 <h3>اقیانوس‌ها</h3>
 <p>بخش بزرگی از سطح زمین را آب‌های اقیانوسی پوشانده‌اند.</p>
@@ -371,6 +415,7 @@ autocomplete="off"
 
 <!-- 29 -->
 <article class="card" data-cat="فناوری">
+<img src="ai.jpg" alt="هوش مصنوعی و فناوری" loading="lazy">
 <span>فناوری</span>
 <h3>هوش مصنوعی و فناوری</h3>
 <p>آشنایی با کاربردهای هوش مصنوعی در فناوری‌های جدید.</p>
@@ -380,6 +425,7 @@ autocomplete="off"
 
 <!-- 30 -->
 <article class="card" data-cat="نجوم">
+<img src="webb.jpg" alt="رصدخانه‌ها و فضا" loading="lazy">
 <span>نجوم</span>
 <h3>رصدخانه‌ها و فضا</h3>
 <p>آشنایی با ابزارهای مهم مطالعه جهان.</p>
