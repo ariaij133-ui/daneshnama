@@ -21,9 +21,15 @@
     margin-bottom: 15px;
     border: 1px solid rgba(0, 255, 136, 0.2);
     transition: transform 0.3s ease;
+    background-color: #1a1a1a;
 }
 .card:hover img {
     transform: scale(1.03);
+}
+/* اگر عکس لود نشد، مخفی شود */
+.card img[src=""], 
+.card img:not([src]) {
+    display: none;
 }
 </style>
 </head>
@@ -135,7 +141,7 @@ autocomplete="off"
 
 <!-- 1 -->
 <article class="card" data-cat="فضا">
-<img src="voyager-1.jpg" alt="ویجر ۱" loading="lazy">
+<img src="voyager-1.jpg" alt="ویجر ۱" loading="lazy" onerror="this.style.display='none'">
 <span>فضا</span>
 <h3>ویجر ۱</h3>
 <p>یکی از دورترین ساخته‌های بشر و یک فضاپیمای تاریخی.</p>
@@ -145,7 +151,7 @@ autocomplete="off"
 
 <!-- 2 -->
 <article class="card" data-cat="فضا">
-<img src="voyager-2.jpg" alt="ویجر ۲" loading="lazy">
+<img src="voyager-2.jpg" alt="ویجر ۲" loading="lazy" onerror="this.style.display='none'">
 <span>فضا</span>
 <h3>ویجر ۲</h3>
 <p>مأموریتی تاریخی برای بررسی مشتری، زحل، اورانوس و نپتون.</p>
@@ -155,7 +161,7 @@ autocomplete="off"
 
 <!-- 3 -->
 <article class="card" data-cat="نجوم">
-<img src="black-holes.jpg" alt="سیاه‌چاله‌ها" loading="lazy">
+<img src="black-holes.jpg" alt="سیاه‌چاله‌ها" loading="lazy" onerror="this.style.display='none'">
 <span>نجوم</span>
 <h3>سیاه‌چاله‌ها</h3>
 <p>ناحیه‌هایی از فضا-زمان با گرانش بسیار شدید.</p>
@@ -195,7 +201,7 @@ autocomplete="off"
 
 <!-- 7 -->
 <article class="card" data-cat="نجوم">
-<img src="milky-way.jpg" alt="راه شیری" loading="lazy">
+<img src="milky-way.jpg" alt="راه شیری" loading="lazy" onerror="this.style.display='none'">
 <span>کیهان‌شناسی</span>
 <h3>راه شیری</h3>
 <p>کهکشانی که منظومه شمسی در آن قرار دارد.</p>
@@ -205,7 +211,7 @@ autocomplete="off"
 
 <!-- 8 -->
 <article class="card" data-cat="نجوم">
-<img src="stars.jpg" alt="ستاره‌ها" loading="lazy">
+<img src="stars.jpg" alt="ستاره‌ها" loading="lazy" onerror="this.style.display='none'">
 <span>ستاره‌شناسی</span>
 <h3>ستاره‌ها</h3>
 <p>جرم‌های درخشانی که انرژی خود را از فرایندهای هسته‌ای می‌گیرند.</p>
@@ -215,7 +221,7 @@ autocomplete="off"
 
 <!-- 9 -->
 <article class="card" data-cat="فضا">
-<img src="webb.jpg" alt="جیمز وب" loading="lazy">
+<img src="webb.jpg" alt="جیمز وب" loading="lazy" onerror="this.style.display='none'">
 <span>رصدخانه فضایی</span>
 <h3>جیمز وب</h3>
 <p>تلسکوپی فروسرخ برای مطالعه جهان دور.</p>
@@ -225,7 +231,7 @@ autocomplete="off"
 
 <!-- 10 -->
 <article class="card" data-cat="فضا">
-<img src="hubble.jpg" alt="هابل" loading="lazy">
+<img src="hubble.jpg" alt="هابل" loading="lazy" onerror="this.style.display='none'">
 <span>رصدخانه فضایی</span>
 <h3>هابل</h3>
 <p>یکی از مشهورترین تلسکوپ‌های فضایی.</p>
@@ -253,9 +259,36 @@ autocomplete="off"
 </article>
 
 
+</div> <!-- پایان ۱۲ کارت اول -->
+
+
+<!-- دکمه مشاهده بیشتر -->
+<div style="text-align: center; margin-top: 30px;">
+    <button id="loadMoreBtn" onclick="loadMore()" style="
+        background: linear-gradient(135deg, #00ff88, #00cc6a);
+        color: #0a0a0a;
+        border: none;
+        padding: 14px 40px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0,255,136,0.3);
+        transition: all 0.3s ease;
+        font-family: inherit;
+    ">
+        مشاهده بیشتر ↓
+    </button>
+</div>
+
+
+<!-- کارت‌های ۱۳ تا ۳۰ (مخفی) -->
+<div class="cards" id="moreCards" style="display:none;">
+
+
 <!-- 13 -->
 <article class="card" data-cat="نجوم">
-<img src="moon.jpeg" alt="ماه" loading="lazy">
+<img src="moon.jpeg" alt="ماه" loading="lazy" onerror="this.style.display='none'">
 <span>نجوم</span>
 <h3>ماه</h3>
 <p>ماه قمر طبیعی زمین است و در جزر و مد نقش دارد.</p>
@@ -265,7 +298,7 @@ autocomplete="off"
 
 <!-- 14 -->
 <article class="card" data-cat="فیزیک">
-<img src="atom.jpg" alt="اتم" loading="lazy">
+<img src="atom.jpg" alt="اتم" loading="lazy" onerror="this.style.display='none'">
 <span>فیزیک</span>
 <h3>اتم</h3>
 <p>واحد سازنده بسیاری از مواد که از هسته و الکترون‌ها تشکیل می‌شود.</p>
@@ -275,7 +308,7 @@ autocomplete="off"
 
 <!-- 15 -->
 <article class="card" data-cat="فیزیک">
-<img src="quantum.jpg" alt="فیزیک کوانتومی" loading="lazy">
+<img src="quantum.jpg" alt="فیزیک کوانتومی" loading="lazy" onerror="this.style.display='none'">
 <span>فیزیک</span>
 <h3>فیزیک کوانتومی</h3>
 <p>شاخه‌ای از فیزیک برای بررسی ماده و انرژی در مقیاس بسیار کوچک.</p>
@@ -295,7 +328,7 @@ autocomplete="off"
 
 <!-- 17 -->
 <article class="card" data-cat="فیزیک">
-<img src="light.jpg" alt="نور" loading="lazy">
+<img src="light.jpg" alt="نور" loading="lazy" onerror="this.style.display='none'">
 <span>فیزیک</span>
 <h3>نور</h3>
 <p>نوعی تابش الکترومغناطیسی.</p>
@@ -305,7 +338,7 @@ autocomplete="off"
 
 <!-- 18 -->
 <article class="card" data-cat="زیست‌شناسی">
-<img src="dna.jpg" alt="DNA" loading="lazy">
+<img src="dna.jpg" alt="DNA" loading="lazy" onerror="this.style.display='none'">
 <span>زیست‌شناسی</span>
 <h3>DNA</h3>
 <p>مولکولی که اطلاعات ژنتیکی بسیاری از جانداران را ذخیره می‌کند.</p>
@@ -315,7 +348,7 @@ autocomplete="off"
 
 <!-- 19 -->
 <article class="card" data-cat="زیست‌شناسی">
-<img src="cell.jpg" alt="سلول" loading="lazy">
+<img src="cell.jpg" alt="سلول" loading="lazy" onerror="this.style.display='none'">
 <span>زیست‌شناسی</span>
 <h3>سلول</h3>
 <p>کوچک‌ترین واحد ساختاری و عملکردی بسیاری از جانداران.</p>
@@ -325,7 +358,7 @@ autocomplete="off"
 
 <!-- 20 -->
 <article class="card" data-cat="زیست‌شناسی">
-<img src="evolution.jpg" alt="تکامل" loading="lazy">
+<img src="evolution.jpg" alt="تکامل" loading="lazy" onerror="this.style.display='none'">
 <span>زیست‌شناسی</span>
 <h3>تکامل</h3>
 <p>تغییرات وراثتی جمعیت‌ها در طول نسل‌ها.</p>
@@ -345,7 +378,7 @@ autocomplete="off"
 
 <!-- 22 -->
 <article class="card" data-cat="زمین‌شناسی">
-<img src="earthquakes.jpg" alt="زلزله" loading="lazy">
+<img src="earthquakes.jpg" alt="زلزله" loading="lazy" onerror="this.style.display='none'">
 <span>زمین‌شناسی</span>
 <h3>زلزله</h3>
 <p>لرزش زمین بر اثر آزاد شدن ناگهانی انرژی.</p>
@@ -365,7 +398,7 @@ autocomplete="off"
 
 <!-- 24 -->
 <article class="card" data-cat="فناوری">
-<img src="robotics.jpg" alt="رباتیک" loading="lazy">
+<img src="robotics.jpg" alt="رباتیک" loading="lazy" onerror="this.style.display='none'">
 <span>فناوری</span>
 <h3>رباتیک</h3>
 <p>دانش طراحی، ساخت و کنترل ربات‌ها.</p>
@@ -375,7 +408,7 @@ autocomplete="off"
 
 <!-- 25 -->
 <article class="card" data-cat="فناوری">
-<img src="internet.jpg" alt="اینترنت" loading="lazy">
+<img src="internet.jpg" alt="اینترنت" loading="lazy" onerror="this.style.display='none'">
 <span>فناوری</span>
 <h3>اینترنت</h3>
 <p>شبکه‌ای جهانی از شبکه‌های به‌هم‌پیوسته برای تبادل داده.</p>
@@ -385,7 +418,7 @@ autocomplete="off"
 
 <!-- 26 -->
 <article class="card" data-cat="زیست‌شناسی">
-<img src="earth.jpg" alt="زمین" loading="lazy">
+<img src="earth.jpg" alt="زمین" loading="lazy" onerror="this.style.display='none'">
 <span>زیست‌شناسی</span>
 <h3>زمین</h3>
 <p>سیاره‌ای که زندگی شناخته‌شده روی آن وجود دارد.</p>
@@ -395,7 +428,7 @@ autocomplete="off"
 
 <!-- 27 -->
 <article class="card" data-cat="نجوم">
-<img src="galaxies.jpg" alt="کهکشان‌ها" loading="lazy">
+<img src="galaxies.jpg" alt="کهکشان‌ها" loading="lazy" onerror="this.style.display='none'">
 <span>نجوم</span>
 <h3>کهکشان‌ها</h3>
 <p>سامانه‌های عظیمی از ستاره‌ها، گاز، غبار و ماده تاریک.</p>
@@ -405,7 +438,7 @@ autocomplete="off"
 
 <!-- 28 -->
 <article class="card" data-cat="زمین‌شناسی">
-<img src="oceans.jpg" alt="اقیانوس‌ها" loading="lazy">
+<img src="oceans.jpg" alt="اقیانوس‌ها" loading="lazy" onerror="this.style.display='none'">
 <span>زمین‌شناسی</span>
 <h3>اقیانوس‌ها</h3>
 <p>بخش بزرگی از سطح زمین را آب‌های اقیانوسی پوشانده‌اند.</p>
@@ -425,12 +458,15 @@ autocomplete="off"
 
 <!-- 30 -->
 <article class="card" data-cat="نجوم">
-<img src="webb.jpg" alt="رصدخانه‌ها و فضا" loading="lazy">
+<img src="webb.jpg" alt="رصدخانه‌ها و فضا" loading="lazy" onerror="this.style.display='none'">
 <span>نجوم</span>
 <h3>رصدخانه‌ها و فضا</h3>
 <p>آشنایی با ابزارهای مهم مطالعه جهان.</p>
 <a href="webb.html">صفحه اختصاصی ←</a>
 </article>
+
+
+</div> <!-- پایان کارت‌های ۱۳ تا ۳۰ -->
 
 
 </div>
@@ -770,6 +806,23 @@ x.addEventListener(
 ()=>filter(x.dataset.filter)
 )
 );
+
+
+// ===== دکمه مشاهده بیشتر =====
+function loadMore() {
+    const moreCards = document.getElementById('moreCards');
+    const btn = document.getElementById('loadMoreBtn');
+    
+    if (moreCards.style.display === 'none') {
+        moreCards.style.display = 'block';
+        btn.innerHTML = 'مشاهده کمتر ↑';
+        moreCards.scrollIntoView({behavior: 'smooth', block: 'start'});
+    } else {
+        moreCards.style.display = 'none';
+        btn.innerHTML = 'مشاهده بیشتر ↓';
+        document.getElementById('topics').scrollIntoView({behavior: 'smooth'});
+    }
+}
 
 </script>
 
