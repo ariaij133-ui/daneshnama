@@ -85,3 +85,49 @@ section{padding:70px 0}
 .search-result:hover{border-color:#00ff88;background:#222}
 .search-result strong{display:block;color:#00ff88} /* سبز نئونی */
 .search-result span{display:block;color:#d1d5db;font-size:13px} /* خاکستری روشن */
+
+
+/* ========================================================= */
+/* ===== استایل کارت‌های موضوعات علمی (مربع‌های نرم) ===== */
+/* ========================================================= */
+
+.card, .topic-card, .box, 
+article, .item, .post {
+    background-color: #1a1a1a; /* پس‌زمینه کارت */
+    border: 1px solid #2e7d32; /* حاشیه سبز تیره */
+    border-radius: 12px; /* گوشه‌های گرد و نرم */
+    padding: 20px; /* فاصله داخلی */
+    margin-bottom: 20px; /* فاصله بین کارت‌ها */
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.05); /* سایه ملایم سبز */
+    transition: all 0.3s ease; /* انیمیشن نرم */
+}
+
+/* وقتی موس روی کارت میره، حاشیه سبز پررنگ‌تر میشه */
+.card:hover, .topic-card:hover, .box:hover,
+article:hover, .item:hover, .post:hover {
+    border-color: #00ff88;
+    box-shadow: 0 6px 18px rgba(0, 255, 136, 0.15);
+}
+
+/* ===== عنوان داخل کارت‌ها (مثل ویجر ۱) ===== */
+.card h2, .card h3, .topic-card h2, .topic-card h3,
+article h2, article h3, .item h2, .item h3 {
+    color: #00ff88 !important; /* سبز نئونی */
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+/* ===== توضیحات داخل کارت‌ها ===== */
+.card p, .topic-card p, article p, .item p {
+    color: #d1d5db !important; /* خاکستری روشن */
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* ===== لینک "صفحه اختصاصی" ===== */
+.card a, .topic-card a, article a, .item a {
+    color: #00ff88 !important; /* سبز نئونی */
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
