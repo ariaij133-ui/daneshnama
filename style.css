@@ -1,133 +1,294 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 
-/* ===== تنظیمات کلی: پس‌زمینه مشکی، متن خاکستری روشن ===== */
+/* ===== تنظیمات کلی و فونت ===== */
 body{
     font-family:Tahoma,"Segoe UI",Arial,sans-serif;
-    background:#0a0a0a; /* مشکی خیلی تیره */
-    color:#d1d5db; /* خاکستری روشن برای متن‌های معمولی */
+    background-color:#0a0a0a;
+    /* پس‌زمینه با گرادیانت ملایم برای عمق بیشتر */
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 255, 136, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 200, 255, 0.05) 0%, transparent 40%);
+    background-attachment: fixed;
+    color:#d1d5db;
     line-height:2;
+    min-height: 100vh;
 }
-a{text-decoration:none;color:inherit}
-button,input{font-family:inherit}
-.container{width:min(1160px,92%);margin:auto}
+a{text-decoration:none;color:inherit;transition: all 0.3s ease;}
+button,input{font-family:inherit;}
+.container{width:min(1160px,92%);margin:auto;}
 
-/* ===== هدر و منو ===== */
+/* ===== هدر (شیشه‌ای) ===== */
 header{
     position:sticky;top:0;z-index:50;
-    background:rgba(15,15,15,.95); /* مشکی نیمه‌شفاف */
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid #00ff88; /* خط سبز نئونی */
+    background:rgba(15,15,15,0.85); /* شیشه‌ای */
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(0, 255, 136, 0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
-nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;}
 
 /* ===== لوگو ===== */
-.logo{font-size:23px;font-weight:900;color:#00ff88;letter-spacing:-.5px} /* سبز نئونی */
-.logo span{color:#d1d5db} /* خاکستری روشن */
+.logo{
+    font-size:24px;font-weight:900;
+    background: linear-gradient(90deg, #00ff88, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing:-0.5px;
+}
+.logo span{
+    -webkit-text-fill-color: #d1d5db;
+    color: #d1d5db;
+}
 
 /* ===== منو ===== */
-.menu{display:flex;gap:24px;list-style:none;font-size:14px;font-weight:700}
-.menu a{color:#d1d5db;transition:.2s} /* خاکستری روشن */
-.menu a:hover{color:#00ff88} /* سبز نئونی موقع هاور */
+.menu{display:flex;gap:28px;list-style:none;font-size:14px;font-weight:700;}
+.menu a{
+    color:#d1d5db;
+    position: relative;
+    padding-bottom: 4px;
+}
+/* خط زیر منو موقع هاور */
+.menu a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #00ff88;
+    transition: width 0.3s ease;
+}
+.menu a:hover{color:#00ff88;}
+.menu a:hover::after{width: 100%;}
 
-/* ===== بخش Hero (بالای سایت) ===== */
-.hero{position:relative;overflow:hidden;background:#0f0f0f;padding:72px 0 65px;border-bottom:1px solid #00ff88}
-.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(1px);opacity:.1}
-.hero:before{width:330px;height:330px;background:#00ff88;left:-130px;top:-120px}
-.hero:after{width:250px;height:250px;background:#00ff88;right:-100px;bottom:-100px}
-.hero-content{position:relative;z-index:2;max-width:900px;margin:auto;text-align:center}
+/* ===== بخش Hero ===== */
+.hero{
+    position:relative;overflow:hidden;
+    background:rgba(15,15,15,0.6);
+    backdrop-filter: blur(10px);
+    padding:80px 0 70px;
+    border-bottom:1px solid rgba(0,255,136,0.2);
+}
+.hero:before,.hero:after{
+    content:"";position:absolute;border-radius:50%;
+    filter:blur(60px);opacity:0.15;
+}
+.hero:before{width:400px;height:400px;background:#00ff88;left:-150px;top:-150px;}
+.hero:after{width:300px;height:300px;background:#00ccff;right:-120px;bottom:-120px;}
+.hero-content{position:relative;z-index:2;max-width:900px;margin:auto;text-align:center;}
 
-/* دکمه بالای هدر (نسخه ارتقا یافته) */
+/* دکمه بالای هدر */
 .kicker{
-    display:inline-block;color:#00ff88;background:#1a1a1a;
-    border:1px solid #00ff88;padding:5px 14px;border-radius:50px;
-    font-size:13px;font-weight:800;margin-bottom:17px;
+    display:inline-block;
+    color:#00ff88;
+    background:rgba(0,255,136,0.1);
+    border:1px solid rgba(0,255,136,0.4);
+    padding:6px 16px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:20px;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(5px);
 }
 
 /* ===== تیتر اصلی ===== */
-h1{font-size:clamp(34px,7vw,64px);line-height:1.3;letter-spacing:-2px;margin-bottom:18px;color:#00ff88} /* سبز نئونی */
-
-/* کلمه "کشف کن" داخل تیتر */
-.highlight{color:#00ff88} 
-
-.hero p{font-size:18px;color:#d1d5db;max-width:760px;margin:auto} /* خاکستری روشن */
+h1{
+    font-size:clamp(34px,7vw,64px);
+    line-height:1.3;
+    letter-spacing:-2px;
+    margin-bottom:20px;
+    background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+}
+.highlight{
+    /* کلمه "کشف کن" هم داخل گرادیانت قرار می‌گیرد */
+    background: linear-gradient(135deg, #00ccff 0%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero p{font-size:18px;color:#a0a5ab;max-width:760px;margin:auto;}
 
 /* ===== عنوان بخش‌ها ===== */
-section{padding:70px 0}
-.section-head{text-align:center;margin-bottom:35px}
-.section-head h2{font-size:32px;line-height:1.4;color:#00ff88} /* سبز نئونی */
-.section-head p{color:#d1d5db;margin-top:6px} /* خاکستری روشن */
+section{padding:80px 0;}
+.section-head{text-align:center;margin-bottom:45px;}
+.section-head h2{
+    font-size:34px;
+    line-height:1.4;
+    color:#00ff88;
+    text-shadow: 0 0 20px rgba(0,255,136,0.2);
+}
+.section-head p{color:#a0a5ab;margin-top:8px;font-size:16px;}
 
 /* ===== جستجو ===== */
-.search-box{display:flex;gap:10px;max-width:760px;margin:28px auto 0}
+.search-box{display:flex;gap:12px;max-width:760px;margin:35px auto 0;}
 .search-box input{
-    flex:1;padding:14px 16px;
-    border:1px solid #333;
-    border-radius:10px;font-size:15px;outline:none;
-    background:#1a1a1a; /* دارک */
-    color:#d1d5db; /* خاکستری روشن */
+    flex:1;
+    padding:16px 20px;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+    background:rgba(26,26,26,0.8);
+    color:#d1d5db;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
-.search-box input:focus{border-color:#00ff88;box-shadow:0 0 0 3px rgba(0,255,136,.1)}
+.search-box input:focus{
+    border-color:#00ff88;
+    box-shadow:0 0 0 4px rgba(0,255,136,0.15);
+    background:rgba(26,26,26,1);
+}
 .search-box button{
-    border:0;border-radius:10px;background:#00ff88;
-    color:#0a0a0a;padding:0 22px;font-weight:bold;cursor:pointer;
+    border:0;
+    border-radius:12px;
+    background:linear-gradient(135deg, #00ff88, #00cc6a);
+    color:#0a0a0a;
+    padding:0 28px;
+    font-weight:bold;
+    cursor:pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,255,136,0.3);
 }
-.search-box button:hover{background:#00cc6a}
+.search-box button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,255,136,0.5);
+}
 
 /* ===== نتایج جستجو ===== */
-#result{max-width:760px;margin:12px auto 0;color:#00ff88;font-size:14px;text-align:center;min-height:28px}
-.search-results{max-width:760px;margin:12px auto 0;text-align:right}
+#result{max-width:760px;margin:15px auto 0;color:#00ff88;font-size:14px;text-align:center;min-height:28px;}
+.search-results{max-width:760px;margin:15px auto 0;text-align:right;}
 .search-result{
-    display:block;background:#1a1a1a;
-    border:1px solid #333;border-radius:10px;
-    padding:11px 14px;margin:7px 0;cursor:pointer;
+    display:block;
+    background:rgba(26,26,26,0.7);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:12px;
+    padding:14px 18px;
+    margin:8px 0;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
-.search-result:hover{border-color:#00ff88;background:#222}
-.search-result strong{display:block;color:#00ff88} /* سبز نئونی */
-.search-result span{display:block;color:#d1d5db;font-size:13px} /* خاکستری روشن */
+.search-result:hover{
+    border-color:#00ff88;
+    background:rgba(30,30,30,0.9);
+    transform: translateX(-5px);
+    box-shadow: 0 4px 15px rgba(0,255,136,0.1);
+}
+.search-result strong{display:block;color:#00ff88;font-size: 16px;}
+.search-result span{display:block;color:#a0a5ab;font-size:13px;}
 
 
 /* ========================================================= */
-/* ===== استایل کارت‌های موضوعات علمی (مربع‌های نرم) ===== */
+/* ===== استایل کارت‌های موضوعات علمی (نسخه پیشرفته) ===== */
 /* ========================================================= */
 
 .card, .topic-card, .box, 
 article, .item, .post {
-    background-color: #1a1a1a; /* پس‌زمینه کارت */
-    border: 1px solid #2e7d32; /* حاشیه سبز تیره */
-    border-radius: 12px; /* گوشه‌های گرد و نرم */
-    padding: 20px; /* فاصله داخلی */
-    margin-bottom: 20px; /* فاصله بین کارت‌ها */
-    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.05); /* سایه ملایم سبز */
-    transition: all 0.3s ease; /* انیمیشن نرم */
+    background:rgba(26,26,26,0.6); /* شیشه‌ای */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,255,136,0.15);
+    border-radius: 16px; /* گوشه‌های نرم‌تر */
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 }
 
-/* وقتی موس روی کارت میره، حاشیه سبز پررنگ‌تر میشه */
+/* خط تزئینی بالای کارت */
+.card::before, .topic-card::before, article::before, .item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00ff88, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* هاور کارت‌ها */
 .card:hover, .topic-card:hover, .box:hover,
 article:hover, .item:hover, .post:hover {
-    border-color: #00ff88;
-    box-shadow: 0 6px 18px rgba(0, 255, 136, 0.15);
+    border-color: rgba(0,255,136,0.6);
+    box-shadow: 0 8px 30px rgba(0,255,136,0.15);
+    transform: translateY(-5px);
+    background:rgba(30,30,30,0.8);
+}
+.card:hover::before, .topic-card:hover::before, article:hover::before {
+    opacity: 1;
 }
 
-/* ===== عنوان داخل کارت‌ها (مثل ویجر ۱) ===== */
+/* ===== عنوان داخل کارت‌ها ===== */
 .card h2, .card h3, .topic-card h2, .topic-card h3,
 article h2, article h3, .item h2, .item h3 {
-    color: #00ff88 !important; /* سبز نئونی */
-    margin-bottom: 10px;
-    font-size: 1.3em;
+    color: #00ff88 !important;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(0,255,136,0.1);
 }
 
 /* ===== توضیحات داخل کارت‌ها ===== */
 .card p, .topic-card p, article p, .item p {
-    color: #d1d5db !important; /* خاکستری روشن */
-    margin-bottom: 10px;
-    line-height: 1.8;
+    color: #d1d5db !important;
+    margin-bottom: 12px;
+    line-height: 1.9;
+    font-size: 15px;
 }
 
 /* ===== لینک "صفحه اختصاصی" ===== */
 .card a, .topic-card a, article a, .item a {
-    color: #00ff88 !important; /* سبز نئونی */
+    color: #00ff88 !important;
     font-weight: bold;
-    display: inline-block;
-    margin-top: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: rgba(0,255,136,0.08);
+    transition: all 0.3s ease;
+}
+.card a:hover, .topic-card a:hover, article a:hover, .item a:hover {
+    background: rgba(0,255,136,0.2);
+    transform: translateX(-5px);
+    box-shadow: 0 0 15px rgba(0,255,136,0.2);
+}
+
+/* ===== فوتر ===== */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(0,255,136,0.15);
+    color: #a0a5ab;
+    font-size: 14px;
+    background: rgba(10,10,10,0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* ===== اسکرول‌بار سفارشی (برای مرورگرهای وب‌کیت) ===== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+    background: #2e7d32;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #00ff88;
 }
