@@ -4,402 +4,168 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="ماهواره چیست و چگونه کار می‌کند؟ در این مقاله جامع از دانش‌نما، با انواع ماهواره، مدارها، کاربردها، تاریخچه و آینده ماهواره‌ها آشنا شوید.">
-<meta name="keywords" content="ماهواره, ماهواره چیست, انواع ماهواره, مدار ماهواره, ماهواره مخابراتی, ماهواره هواشناسی, ماهواره ایرانی">
+<meta name="keywords" content="ماهواره, ماهواره چیست, انواع ماهواره, مدار ماهواره, ماهواره مخابراتی, ماهواره هواشناسی, ماهواره ایرانی, GPS">
 <meta name="robots" content="index,follow">
-<meta name="author" content="دانش‌نما">
-
-<meta property="og:title" content="ماهواره چیست؟ راهنمای کامل و جامع">
-<meta property="og:description" content="همه چیز درباره ماهواره‌ها: از تاریخچه و انواع تا مدارها و کاربردها.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://ariaij133-ui.github.io/daneshnama/satellites.html">
-<meta property="og:image" content="https://ariaij133-ui.github.io/daneshnama/satellites.jpg">
-
 <link rel="canonical" href="https://ariaij133-ui.github.io/daneshnama/satellites.html">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link rel="stylesheet" href="style.css">
-
 <title>ماهواره چیست؟ راهنمای کامل و جامع | دانش‌نما</title>
 
 <style>
-/* ===== صفحه مقاله ===== */
-.article-wrap {
-    max-width: 780px;
+.article-page {
+    max-width: 800px;
     margin: 0 auto;
     padding: 40px 0 60px;
 }
-
-/* تصویر شاخص */
-.featured-image {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 18px;
-    margin-bottom: 30px;
-    border: 1px solid rgba(0,255,136,0.15);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-}
-
-/* تیتر اصلی */
-.article-title {
-    font-size: clamp(26px, 5vw, 38px);
+.article-page h1 {
+    font-size: clamp(26px, 5vw, 40px);
     line-height: 1.5;
-    margin-bottom: 18px;
-    background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+    text-align: center;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #00ff88, #00ccff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 900;
-    text-align: center;
 }
-
-/* اطلاعات مقاله */
-.article-meta {
+.article-page .meta {
     text-align: center;
-    color: #7a8088;
+    color: #a0a5ab;
     font-size: 13px;
-    margin-bottom: 35px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid rgba(0,255,136,0.1);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,255,136,0.15);
 }
-.article-meta span { margin: 0 10px; }
-
-/* متن مقاله */
-.article-text p {
-    color: #c5c9cf;
+.article-page img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0,255,136,0.15);
+}
+.article-page p {
+    color: #d1d5db;
     line-height: 2.2;
     font-size: 16px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     text-align: justify;
-    letter-spacing: 0.2px;
 }
-.article-text strong {
-    color: #00ff88;
-    font-weight: 700;
-}
-.article-text em {
-    color: #00ccff;
-    font-style: normal;
-    font-weight: 600;
-}
-
-/* تیترهای بخش (با خط سبز کنار) */
-.article-text h2 {
+.article-page h2 {
     color: #00ff88;
     font-size: 1.6em;
     font-weight: 800;
-    margin: 45px 0 20px;
-    padding-right: 18px;
+    margin: 40px 0 18px;
+    padding-right: 16px;
     border-right: 5px solid #00ff88;
-    line-height: 1.6;
-    text-shadow: 0 0 15px rgba(0,255,136,0.15);
 }
-.article-text h3 {
+.article-page h3 {
     color: #00ccff;
     font-size: 1.2em;
     font-weight: 700;
-    margin: 30px 0 14px;
-    padding-right: 14px;
+    margin: 28px 0 12px;
+    padding-right: 12px;
     border-right: 3px solid #00ccff;
 }
-
-/* لیست‌ها */
-.article-text ul,
-.article-text ol {
-    margin: 15px 0 20px;
+.article-page ul, .article-page ol {
     padding-right: 25px;
+    margin: 15px 0;
 }
-.article-text li {
-    color: #c5c9cf;
-    line-height: 2.1;
+.article-page li {
+    color: #d1d5db;
+    line-height: 2;
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
-.article-text li::marker {
-    color: #00ff88;
-    font-weight: bold;
-}
-
-/* نقل قول */
-.article-text blockquote {
+.article-page strong { color: #00ff88; }
+.article-page a { color: #00ff88; border-bottom: 1px dashed #00ff88; }
+.article-page a:hover { color: #00ccff; }
+.article-page blockquote {
     background: rgba(0,255,136,0.06);
     border-right: 4px solid #00ff88;
     border-radius: 10px;
-    padding: 18px 22px;
-    margin: 25px 0;
+    padding: 15px 20px;
+    margin: 20px 0;
     color: #d1d5db;
     font-style: italic;
     line-height: 2;
-    font-size: 15px;
 }
-
-/* جدول */
-.article-text table {
+.article-page table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 25px 0;
-    border-radius: 12px;
-    overflow: hidden;
+    border-collapse: collapse;
+    margin: 20px 0;
     font-size: 14px;
 }
-.article-text table th {
-    background: linear-gradient(135deg, rgba(0,255,136,0.15), rgba(0,204,255,0.1));
+.article-page table th {
+    background: rgba(0,255,136,0.1);
     color: #00ff88;
-    font-weight: 700;
-    padding: 14px 12px;
-    text-align: right;
-    border-bottom: 1px solid rgba(0,255,136,0.2);
-}
-.article-text table td {
     padding: 12px;
-    color: #c5c9cf;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    background: rgba(26,26,26,0.5);
+    text-align: right;
+    border: 1px solid rgba(0,255,136,0.2);
 }
-.article-text table tr:last-child td { border-bottom: none; }
-.article-text table tr:hover td {
-    background: rgba(0,255,136,0.05);
+.article-page table td {
+    padding: 10px 12px;
+    color: #d1d5db;
+    border: 1px solid rgba(0,255,136,0.15);
 }
-
-/* لینک داخل متن */
-.article-text a {
-    color: #00ff88;
-    border-bottom: 1px dashed #00ff88;
-    font-weight: 700;
-}
-.article-text a:hover {
-    color: #00ccff;
-    border-bottom-color: #00ccff;
-}
-
-/* ===== فهرست مطالب ===== */
 .toc-box {
     background: rgba(26,26,26,0.6);
     border: 1px solid rgba(0,255,136,0.2);
-    border-radius: 16px;
-    padding: 22px 26px;
-    margin: 30px 0;
-    backdrop-filter: blur(10px);
-}
-.toc-box h4 {
-    color: #00ff88;
-    font-size: 1.05em;
-    margin-bottom: 14px;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-.toc-box ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.toc-box li {
-    margin-bottom: 4px;
-}
-.toc-box a {
-    color: #a0a5ab;
-    font-size: 14.5px;
-    border: none !important;
-    padding: 6px 0;
-    display: block;
-    transition: all 0.25s ease;
-}
-.toc-box a:hover {
-    color: #00ff88;
-    padding-right: 10px;
-}
-
-/* ===== FAQ ===== */
-.faq-box {
-    background: rgba(26,26,26,0.5);
-    border: 1px solid rgba(0,255,136,0.12);
     border-radius: 14px;
     padding: 20px 24px;
-    margin-bottom: 14px;
-    transition: all 0.3s ease;
+    margin: 25px 0;
 }
-.faq-box:hover {
-    border-color: rgba(0,255,136,0.4);
-    background: rgba(30,30,30,0.7);
-}
-.faq-box h3 {
-    color: #00ccff;
-    font-size: 1.05em;
-    margin: 0 0 10px;
-    border: none;
-    padding: 0;
-}
-.faq-box p {
-    margin: 0;
-    font-size: 15px;
-}
-
-/* ===== برچسب‌ها ===== */
-.tags-section {
-    margin-top: 45px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(0,255,136,0.15);
-}
-.tags-section h4 {
-    color: #7a8088;
-    font-size: 13px;
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-.tags-section a {
-    display: inline-block;
-    color: #00ff88;
-    background: rgba(0,255,136,0.08);
-    border: 1px solid rgba(0,255,136,0.25);
-    padding: 6px 16px;
-    border-radius: 50px;
-    font-size: 13px;
-    margin: 0 5px 8px 0;
-    font-weight: 500;
-    transition: all 0.25s ease;
-}
-.tags-section a:hover {
-    background: rgba(0,255,136,0.2);
-    transform: translateY(-2px);
-}
-
-/* ===== مقالات مرتبط ===== */
-.related-section {
-    margin-top: 45px;
-    padding-top: 25px;
-    border-top: 1px solid rgba(0,255,136,0.15);
-}
-.related-section h3 {
-    color: #00ff88;
-    font-size: 1.3em;
-    margin-bottom: 20px;
-    border: none;
-    padding: 0;
-}
-.related-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 14px;
-}
-.related-card {
-    background: rgba(26,26,26,0.6);
-    border: 1px solid rgba(0,255,136,0.12);
-    border-radius: 12px;
-    padding: 16px;
-    transition: all 0.3s ease;
-}
-.related-card:hover {
-    border-color: #00ff88;
-    background: rgba(30,30,30,0.85);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,255,136,0.15);
-}
-.related-card a {
-    color: #00ff88;
-    font-weight: 700;
-    border: none;
-    font-size: 14.5px;
-    display: block;
-    margin-bottom: 6px;
-}
-.related-card p {
-    color: #7a8088;
-    font-size: 12.5px;
-    line-height: 1.7;
-    margin: 0;
-    text-align: right;
-}
-
-/* ===== دکمه بازگشت ===== */
-.back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+.toc-box h4 { color: #00ff88; margin-bottom: 12px; }
+.toc-box ul { list-style: none; padding: 0; margin: 0; }
+.toc-box a { color: #d1d5db; border: none; font-size: 15px; display: block; padding: 5px 0; }
+.toc-box a:hover { color: #00ff88; padding-right: 8px; }
+.related-box {
     margin-top: 40px;
-    color: #00ff88;
-    padding: 12px 25px;
-    border-radius: 12px;
-    background: rgba(0,255,136,0.08);
-    border: 1px solid rgba(0,255,136,0.3);
-    font-weight: 700;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,255,136,0.15);
 }
-.back-btn:hover {
-    background: rgba(0,255,136,0.2);
-    transform: translateX(-5px);
+.related-box h3 { color: #00ff88; border: none; padding: 0; margin-bottom: 15px; }
+.related-box a { display: block; color: #00ff88; padding: 8px 0; border: none; }
+
+@media (max-width: 640px) {
+    .article-page { padding: 20px 0 40px; }
+    .article-page img { height: 200px; }
+    .article-page p, .article-page li { font-size: 15px; line-height: 2; }
+    .article-page h2 { font-size: 1.35em; }
 }
 
-/* ===== تم روشن ===== */
-body.light-mode .article-title {
-    background: linear-gradient(135deg, #00b36b 0%, #0088cc 100%);
+/* تم روشن */
+body.light-mode .article-page h1 {
+    background: linear-gradient(135deg, #00b36b, #0088cc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-body.light-mode .article-meta { color: #8a9098; border-bottom-color: rgba(0,179,107,0.15); }
-body.light-mode .article-text p,
-body.light-mode .article-text li { color: #2a2e35; }
-body.light-mode .article-text strong { color: #00b36b; }
-body.light-mode .article-text em { color: #0088cc; }
-body.light-mode .article-text h2 { color: #00b36b; border-right-color: #00b36b; text-shadow: none; }
-body.light-mode .article-text h3 { color: #0088cc; border-right-color: #0088cc; }
-body.light-mode .article-text blockquote {
+body.light-mode .article-page p,
+body.light-mode .article-page li { color: #1a1a2e; }
+body.light-mode .article-page strong { color: #00b36b; }
+body.light-mode .article-page h2 { color: #00b36b; border-right-color: #00b36b; }
+body.light-mode .article-page h3 { color: #0088cc; border-right-color: #0088cc; }
+body.light-mode .article-page a { color: #00b36b; }
+body.light-mode .article-page blockquote {
     background: rgba(0,179,107,0.06);
     border-right-color: #00b36b;
-    color: #2a2e35;
+    color: #1a1a2e;
 }
-body.light-mode .article-text table th {
-    background: linear-gradient(135deg, rgba(0,179,107,0.15), rgba(0,136,204,0.1));
+body.light-mode .article-page table th {
+    background: rgba(0,179,107,0.1);
     color: #00b36b;
-}
-body.light-mode .article-text table td {
-    color: #2a2e35;
-    background: rgba(255,255,255,0.5);
-    border-bottom-color: rgba(0,0,0,0.06);
-}
-body.light-mode .article-text a { color: #00b36b; border-bottom-color: #00b36b; }
-body.light-mode .toc-box {
-    background: rgba(255,255,255,0.7);
     border-color: rgba(0,179,107,0.2);
 }
+body.light-mode .article-page table td {
+    color: #1a1a2e;
+    border-color: rgba(0,179,107,0.15);
+}
+body.light-mode .toc-box { background: rgba(255,255,255,0.7); border-color: rgba(0,179,107,0.2); }
 body.light-mode .toc-box h4 { color: #00b36b; }
 body.light-mode .toc-box a { color: #5a6270; }
-body.light-mode .faq-box {
-    background: rgba(255,255,255,0.7);
-    border-color: rgba(0,179,107,0.15);
-}
-body.light-mode .faq-box h3 { color: #0088cc; }
-body.light-mode .faq-box p { color: #2a2e35; }
-body.light-mode .tags-section a {
-    color: #00b36b;
-    background: rgba(0,179,107,0.08);
-    border-color: rgba(0,179,107,0.25);
-}
-body.light-mode .related-card {
-    background: rgba(255,255,255,0.7);
-    border-color: rgba(0,179,107,0.15);
-}
-body.light-mode .related-card a { color: #00b36b; }
-body.light-mode .related-card p { color: #8a9098; }
-body.light-mode .back-btn {
-    color: #00b36b;
-    background: rgba(0,179,107,0.08);
-    border-color: rgba(0,179,107,0.3);
-}
-
-/* ===== موبایل ===== */
-@media (max-width: 640px){
-    .article-wrap { padding: 25px 0 40px; }
-    .featured-image { height: 200px; border-radius: 14px; }
-    .article-text h2 { font-size: 1.35em; padding-right: 14px; border-right-width: 4px; }
-    .article-text h3 { font-size: 1.1em; }
-    .article-text p, .article-text li { font-size: 15px; line-height: 2.1; }
-    .toc-box, .faq-box { padding: 18px 20px; }
-    .related-grid { grid-template-columns: 1fr; }
-}
+body.light-mode .related-box h3 { color: #00b36b; }
+body.light-mode .related-box a { color: #00b36b; }
 </style>
 </head>
 
@@ -416,7 +182,7 @@ body.light-mode .back-btn {
 <a href="about.html">درباره ما</a>
 <a href="contact.html">تماس با ما</a>
 </nav>
-<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تغییر تم">🌙</button>
+<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
 </div>
 </header>
 
@@ -424,21 +190,15 @@ body.light-mode .back-btn {
 <section>
 <div class="container">
 
-<article class="article-wrap">
+<article class="article-page">
 
-<img class="featured-image" src="satellites.jpg" alt="ماهواره در مدار زمین" loading="lazy">
+<img src="satellites.jpg" alt="ماهواره در مدار زمین" loading="lazy">
 
-<h1 class="article-title">ماهواره چیست؟ راهنمای کامل و جامع</h1>
+<h1>ماهواره چیست؟ راهنمای کامل و جامع</h1>
 
-<div class="article-meta">
-<span>📅 ۱۴۰۵</span>
-<span>⏱️ ۱۲ دقیقه مطالعه</span>
-<span>✍️ دانش‌نما</span>
-</div>
+<div class="meta">📅 ۱۴۰۵ · ⏱️ ۱۲ دقیقه مطالعه · ✍️ دانش‌نما</div>
 
-<div class="article-text">
-
-<p>ماهواره یکی از بزرگ‌ترین دستاوردهای بشر در قرن بیستم است. این فناوری، زندگی ما را به‌طور بنیادین تغییر داده: از ارتباطات تلفنی و اینترنتی گرفته تا ناوبری GPS، پیش‌بینی هوا، پخش تلویزیونی و حتی جاسوسی نظامی. در این مقاله جامع از <strong>دانش‌نما</strong>، به زبان ساده توضیح می‌دهیم که ماهواره چیست، چگونه کار می‌کند، چه انواعی دارد و چه آینده‌ای در انتظار آن است.</p>
+<p>ماهواره یکی از بزرگ‌ترین دستاوردهای بشر در قرن بیستم است. این فناوری، زندگی ما را به‌طور بنیادین تغییر داده: از ارتباطات تلفنی و اینترنتی گرفته تا ناوبری GPS، پیش‌بینی هوا، پخش تلویزیونی و حتی جاسوسی نظامی. در این مقاله جامع از <strong>دانش‌نما</strong>، به زبان ساده توضیح می‌دهیم که ماهواره چیست، چگونه کار می‌کند، چه انواعی دارد، چه مدارهایی دارد و چه آینده‌ای در انتظار آن است.</p>
 
 <div class="toc-box">
 <h4>📑 فهرست مطالب</h4>
@@ -451,13 +211,14 @@ body.light-mode .back-btn {
 <li><a href="#parts">۶. اجزای اصلی یک ماهواره</a></li>
 <li><a href="#iran">۷. ماهواره‌های ایران</a></li>
 <li><a href="#future">۸. آینده ماهواره‌ها</a></li>
-<li><a href="#faq">۹. پرسش‌های متداول</a></li>
+<li><a href="#facts">۹. حقایق جالب درباره ماهواره‌ها</a></li>
+<li><a href="#faq">۱۰. پرسش‌های متداول</a></li>
 </ul>
 </div>
 
 <h2 id="what-is">۱. ماهواره چیست؟</h2>
 <p>ماهواره (Satellite) به هر جسمی گفته می‌شود که به دور یک جسم بزرگ‌تر در فضا می‌چرخد. ماه، ماهواره طبیعی زمین است. اما در اصطلاح فناوری، منظور ما <strong>ماهواره‌های مصنوعی</strong> هستند؛ ساخته‌های دست بشر که به فضا فرستاده می‌شوند و به دور زمین (یا سیارات دیگر) می‌چرخند.</p>
-<p>ماهواره‌ها برای اهداف مختلفی استفاده می‌شوند: ارتباطات، ناوبری، هواشناسی، نقشه‌برداری، پژوهش‌های علمی، جاسوسی و حتی گردشگری فضایی.</p>
+<p>ماهواره‌ها برای اهداف مختلفی استفاده می‌شوند: ارتباطات، ناوبری، هواشناسی، نقشه‌برداری، پژوهش‌های علمی، جاسوسی و حتی گردشگری فضایی. امروزه زندگی ما به‌طور مستقیم به ماهواره‌ها وابسته است؛ از GPS گوشی‌هایمان تا پیش‌بینی هوای فردا.</p>
 
 <h2 id="history">۲. تاریخچه ماهواره</h2>
 <p>تاریخ ماهواره‌ها با یک نقطه عطف تاریخی آغاز می‌شود:</p>
@@ -557,7 +318,6 @@ body.light-mode .back-btn {
 
 <h2 id="parts">۶. اجزای اصلی یک ماهواره</h2>
 <p>هر ماهواره، از چند بخش اصلی تشکیل شده است:</p>
-
 <ul>
 <li><strong>بدنه (Bus):</strong> سازه اصلی که همه اجزا را نگه می‌دارد.</li>
 <li><strong>پنل‌های خورشیدی:</strong> برای تولید انرژی الکتریکی.</li>
@@ -606,73 +366,45 @@ body.light-mode .back-btn {
 <h3>د) پاکسازی مدار</h3>
 <p>با افزایش ماهواره‌ها، مسئله <strong>زباله‌های فضایی</strong> جدی‌تر می‌شود. در آینده، ماهواره‌های مخصوصی برای جمع‌آوری زباله‌های فضایی ساخته خواهند شد.</p>
 
-<h2 id="faq">۹. پرسش‌های متداول</h2>
+<h2 id="facts">۹. حقایق جالب درباره ماهواره‌ها</h2>
+<ul>
+<li>اولین ماهواره، اسپوتنیک ۱، فقط ۲۱ روز دوام آورد.</li>
+<li>بیش از <strong>۱۰,۰۰۰ ماهواره فعال</strong> در مدار زمین وجود دارد.</li>
+<li>ماهواره‌های GEO از دید ناظر زمینی ثابت به نظر می‌رسند.</li>
+<li>ایستگاه فضایی بین‌المللی، بزرگ‌ترین ماهواره ساخت بشر است.</li>
+<li>ارتباط تلفنی بین‌قاره‌ای، بدون ماهواره ممکن نبود.</li>
+<li>ماهواره‌ها برای دیدن آب‌وهوا، پیدا کردن ماهی‌ها در دریا و حتی ردیابی حیوانات وحشی استفاده می‌شوند.</li>
+</ul>
 
-<div class="faq-box">
+<h2 id="faq">۱۰. پرسش‌های متداول</h2>
+
 <h3>چند ماهواره در مدار زمین وجود دارد؟</h3>
 <p>تا سال ۲۰۲۴، بیش از ۱۰,۰۰۰ ماهواره فعال در مدار زمین وجود دارد و تعداد کل ماهواره‌های پرتاب‌شده از ۱۵,۰۰۰ گذشته است.</p>
-</div>
 
-<div class="faq-box">
 <h3>ماهواره‌ها چقدر عمر می‌کنند؟</h3>
 <p>بسته به نوع مدار و طراحی، بین ۵ تا ۲۰ سال. ماهواره‌های GEO معمولاً عمر طولانی‌تری دارند.</p>
-</div>
 
-<div class="faq-box">
 <h3>آیا ماهواره‌ها برای سلامتی خطرناک هستند؟</h3>
 <p>خیر. امواج رادیویی ماهواره‌ها در سطحی نیست که برای انسان خطرناک باشد. استانداردهای بین‌المللی، میزان تشعشعات را کنترل می‌کنند.</p>
-</div>
 
-<div class="faq-box">
 <h3>چگونه ماهواره‌ها را به فضا می‌فرستند؟</h3>
 <p>با استفاده از موشک‌های ماهواره‌بر. این موشک‌ها ماهواره را تا ارتفاع مورد نظر می‌برند و سپس آن را در مدار رها می‌کنند.</p>
-</div>
 
-<div class="faq-box">
 <h3>آیا می‌توان با تلسکوپ آماتوری ماهواره‌ها را دید؟</h3>
 <p>بله! ماهواره‌های LEO مثل ایستگاه فضایی بین‌المللی را می‌توان با چشم غیرمسلح هم دید. آن‌ها مثل ستاره‌های متحرک در آسمان ظاهر می‌شوند.</p>
-</div>
 
-<div class="faq-box">
-<h3>تفاوت ماهواره و فضاپیما چیست؟</h3>
-<p>فضاپیما معمولاً به اجرامی گفته می‌شود که برای اکتشاف به فضا فرستاده می‌شوند (مثل کاوشگرها)، ولی ماهواره به دور یک جسم می‌چرخد.</p>
-</div>
-
-<div class="tags-section">
-<h4>برچسب‌ها:</h4>
-<a href="index.html#topics">ماهواره</a>
-<a href="index.html#topics">فناوری فضایی</a>
-<a href="index.html#topics">فضا</a>
-<a href="index.html#topics">ارتباطات</a>
-<a href="index.html#topics">GPS</a>
-<a href="index.html#topics">هواشناسی</a>
-</div>
-
-<div class="related-section">
+<div class="related-box">
 <h3>📚 مقالات مرتبط</h3>
-<div class="related-grid">
-<div class="related-card">
-<a href="iss.html">ایستگاه فضایی بین‌المللی</a>
-<p>آزمایشگاهی مداری برای پژوهش‌های علمی.</p>
-</div>
-<div class="related-card">
-<a href="webb.html">جیمز وب</a>
-<p>تلسکوپی فروسرخ برای مطالعه جهان دور.</p>
-</div>
-<div class="related-card">
-<a href="hubble.html">هابل</a>
-<p>یکی از مشهورترین تلسکوپ‌های فضایی.</p>
-</div>
-<div class="related-card">
-<a href="ai.html">هوش مصنوعی</a>
-<p>روش‌هایی برای ساخت سامانه‌های هوشمند.</p>
-</div>
-</div>
+<a href="iss.html">← ایستگاه فضایی بین‌المللی</a>
+<a href="webb.html">← جیمز وب</a>
+<a href="hubble.html">← هابل</a>
+<a href="ai.html">← هوش مصنوعی</a>
 </div>
 
-<a href="index.html" class="back-btn">← بازگشت به خانه</a>
+<p style="text-align:center; margin-top:30px;">
+<a href="index.html" style="display:inline-block; padding:12px 25px; border-radius:12px; background:rgba(0,255,136,0.08); border:1px solid rgba(0,255,136,0.3); border-bottom:none;">← بازگشت به خانه</a>
+</p>
 
-</div>
 </article>
 
 </div>
@@ -708,4 +440,4 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 </body>
-                             </html>
+    </html>
