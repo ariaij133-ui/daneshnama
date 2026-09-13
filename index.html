@@ -2,6 +2,16 @@
 <html lang="fa" dir="rtl">
 <head>
 <script>
+    // جلوگیری از پرش رنگ در حالت روشن
+    (function(){
+        const savedTheme = localStorage.getItem('theme');
+        if(savedTheme === 'light'){
+            document.documentElement.classList.add('light-mode-preload');
+        }
+    })();
+</script>
+
+<script>
     !function(e,t,n){
         e.yektanetAnalyticsObject=n,
         e[n]=e[n]||function(){e[n].q.push(arguments)},
@@ -21,6 +31,7 @@
         a.appendChild(l);
     }(window,document,"yektanet");
 </script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -60,6 +71,12 @@
     text-align: center;
     min-height: 100px;
 }
+
+/* جلوگیری از پرش رنگ قبل از لود کامل */
+.light-mode-preload body {
+    background-color: #f5f7fa;
+    color: #1a1a2e;
+}
 </style>
 </head>
 
@@ -77,6 +94,8 @@
 <a href="#topics">موضوعات</a>
 <a href="#categories">دسته‌ها</a>
 </nav>
+
+<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تغییر تم" aria-label="تغییر تم">🌙</button>
 
 </div>
 </header>
@@ -278,6 +297,16 @@ autocomplete="off"
 <h3>منظومه شمسی</h3>
 <p>سامانه‌ای شامل خورشید، سیارات، قمرها و اجرام کوچک‌تر.</p>
 <a href="solar-system.html">صفحه اختصاصی ←</a>
+</article>
+
+
+<!-- کارت جدید: مغز -->
+<article class="card" data-cat="زیست‌شناسی">
+<img src="brain.jpg" alt="مغز" loading="lazy" onerror="this.style.display='none'">
+<span>زیست‌شناسی</span>
+<h3>مغز</h3>
+<p>مرکز کنترل بدن و پردازش اطلاعات در جانداران.</p>
+<a href="brain.html">صفحه اختصاصی ←</a>
 </article>
 
 
@@ -498,6 +527,7 @@ const data = [
 { title:"هابل", cat:"رصدخانه فضایی", url:"hubble.html", desc:"یکی از مشهورترین تلسکوپ‌های فضایی." },
 { title:"ایستگاه فضایی بین‌المللی", cat:"مهندسی فضایی", url:"iss.html", desc:"آزمایشگاهی مداری برای پژوهش‌های علمی." },
 { title:"منظومه شمسی", cat:"نجوم", url:"solar-system.html", desc:"سامانه‌ای شامل خورشید، سیارات، قمرها و اجرام کوچک‌تر." },
+{ title:"مغز", cat:"زیست‌شناسی", url:"brain.html", desc:"مرکز کنترل بدن و پردازش اطلاعات در جانداران." },
 { title:"ماه", cat:"نجوم", url:"moon.html", desc:"ماه قمر طبیعی زمین است و در جزر و مد نقش دارد." },
 { title:"اتم", cat:"فیزیک", url:"atom.html", desc:"واحد سازنده بسیاری از مواد که از هسته و الکترون‌ها تشکیل می‌شود." },
 { title:"فیزیک کوانتومی", cat:"فیزیک", url:"quantum.html", desc:"شاخه‌ای از فیزیک برای بررسی ماده و انرژی در مقیاس بسیار کوچک." },
@@ -570,7 +600,7 @@ function filterCards(cat){
 }
 
 
-// ===== وصل کردن دکمه‌ها =====
+// ===== وصل کردن دکمه‌های فیلتر =====
 document.querySelectorAll("[data-filter]").forEach(btn => {
     btn.addEventListener("click", () => filterCards(btn.dataset.filter));
 });
@@ -590,6 +620,42 @@ function loadMore() {
         btn.innerHTML = 'مشاهده بیشتر ↓';
         document.getElementById('topics').scrollIntoView({behavior: 'smooth'});
     }
+}
+
+
+// ===== تغییر تم (Dark/Light) =====
+function applyTheme(theme){
+    const btn = document.getElementById('themeToggle');
+    if(theme === 'light'){
+        document.body.classList.add('light-mode');
+        if(btn) btn.innerHTML = '☀️';
+    } else {
+        document.body.classList.remove('light-mode');
+        if(btn) btn.innerHTML = '🌙';
+    }
+}
+
+function toggleTheme(){
+    const isLight = document.body.classList.contains('light-mode');
+    const newTheme = isLight ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+}
+
+// اعمال تم اولیه بعد از لود
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
+    document.documentElement.classList.remove('light-mode-preload');
+});
+
+// اگه کاربر تم سیستمش رو تغییر داد و انتخابی نکرده
+if(window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+        if(!localStorage.getItem('theme')){
+            applyTheme(e.matches ? 'light' : 'dark');
+        }
+    });
 }
 
 </script>
