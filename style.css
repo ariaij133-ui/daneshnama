@@ -12,6 +12,7 @@ body{
     color:#d1d5db;
     line-height:2;
     min-height: 100vh;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 a{text-decoration:none;color:inherit;transition: all 0.3s ease;}
 button,input{font-family:inherit;}
@@ -26,6 +27,7 @@ header{
     -webkit-backdrop-filter:blur(16px);
     border-bottom:1px solid rgba(0, 255, 136, 0.3);
     box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    transition: background 0.4s ease;
 }
 nav{height:72px;display:flex;align-items:center;justify-content:space-between;}
 
@@ -62,6 +64,30 @@ nav{height:72px;display:flex;align-items:center;justify-content:space-between;}
 }
 .menu a:hover{color:#00ff88;}
 .menu a:hover::after{width: 100%;}
+
+/* ===== دکمه تغییر تم ===== */
+.theme-toggle{
+    background: rgba(26,26,26,0.8);
+    border: 1px solid rgba(0,255,136,0.25);
+    color: #d1d5db;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    margin-right: 16px;
+}
+.theme-toggle:hover{
+    border-color: #00ff88;
+    background: rgba(0,255,136,0.1);
+    transform: rotate(20deg) scale(1.1);
+    box-shadow: 0 0 20px rgba(0,255,136,0.3);
+}
 
 /* ===== بخش Hero ===== */
 .hero{
@@ -199,7 +225,7 @@ section{padding:80px 0;}
     padding:15px;
 }
 
-/* ===== فیلترها (دکمه‌های زیر جستجو) ===== */
+/* ===== فیلترها ===== */
 .filters{
     display:flex;
     flex-wrap:wrap;
@@ -280,10 +306,7 @@ section{padding:80px 0;}
     font-size: 16px;
 }
 
-/* ========================================================= */
-/* ===== استایل کارت‌های موضوعات علمی ===== */
-/* ========================================================= */
-
+/* ===== کارت‌ها ===== */
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -362,7 +385,6 @@ article h2, article h3, .item h2, .item h3 {
     box-shadow: 0 0 15px rgba(0,255,136,0.2);
 }
 
-/* برچسب دسته بالای کارت */
 .card > span:first-of-type {
     display: inline-block;
     color: #00ccff;
@@ -399,9 +421,10 @@ footer {
     font-size: 14px;
     background: rgba(10,10,10,0.8);
     backdrop-filter: blur(10px);
+    transition: background 0.4s ease;
 }
 
-/* ===== اسکرول‌بار سفارشی ===== */
+/* ===== اسکرول‌بار ===== */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -416,6 +439,164 @@ footer {
     background: #00ff88;
 }
 
+/* ========================================================= */
+/* ===== تم روشن (Light Mode) ===== */
+/* ========================================================= */
+body.light-mode{
+    background-color:#f5f7fa;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 179, 107, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 136, 204, 0.06) 0%, transparent 40%);
+    color:#1a1a2e;
+}
+body.light-mode header{
+    background:rgba(255,255,255,0.9);
+    border-bottom-color: rgba(0, 179, 107, 0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+body.light-mode .logo span{
+    -webkit-text-fill-color: #1a1a2e;
+    color: #1a1a2e;
+}
+body.light-mode .menu a{
+    color:#1a1a2e;
+}
+body.light-mode .hero{
+    background:rgba(255,255,255,0.6);
+    border-bottom-color: rgba(0, 179, 107, 0.2);
+}
+body.light-mode .hero p{
+    color:#5a6270;
+}
+body.light-mode .tag{
+    color:#00b36b;
+    background:rgba(0, 179, 107, 0.1);
+    border-color: rgba(0, 179, 107, 0.4);
+}
+body.light-mode h1{
+    background: linear-gradient(135deg, #00b36b 0%, #0088cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+body.light-mode .highlight{
+    background: linear-gradient(135deg, #0088cc 0%, #00b36b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+body.light-mode .search input{
+    background: rgba(255,255,255,0.9);
+    color: #1a1a2e;
+    border-color: rgba(0,0,0,0.1);
+}
+body.light-mode .search input:focus{
+    background: #ffffff;
+    border-color: #00b36b;
+    box-shadow: 0 0 0 4px rgba(0, 179, 107, 0.15);
+}
+body.light-mode .search button{
+    background: linear-gradient(135deg, #00b36b, #00cc6a);
+}
+body.light-mode .filters button,
+body.light-mode .categoryGrid button{
+    background: rgba(255,255,255,0.8);
+    color: #1a1a2e;
+    border-color: rgba(0, 179, 107, 0.3);
+}
+body.light-mode .filters button:hover,
+body.light-mode .categoryGrid button:hover{
+    border-color: #00b36b;
+    color: #00b36b;
+    background: rgba(0, 179, 107, 0.1);
+}
+body.light-mode .categories h2,
+body.light-mode .head h2,
+body.light-mode .section-head h2{
+    color: #00b36b;
+}
+body.light-mode .head p,
+body.light-mode .section-head p{
+    color: #5a6270;
+}
+body.light-mode .card,
+body.light-mode .topic-card,
+body.light-mode article,
+body.light-mode .item{
+    background: rgba(255,255,255,0.8);
+    border-color: rgba(0, 179, 107, 0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+body.light-mode .card:hover,
+body.light-mode .topic-card:hover,
+body.light-mode article:hover,
+body.light-mode .item:hover{
+    background: #ffffff;
+    border-color: rgba(0, 179, 107, 0.6);
+    box-shadow: 0 8px 30px rgba(0, 179, 107, 0.15);
+}
+body.light-mode .card h2,
+body.light-mode .card h3,
+body.light-mode article h2,
+body.light-mode article h3{
+    color: #00b36b !important;
+}
+body.light-mode .card p,
+body.light-mode article p{
+    color: #1a1a2e !important;
+}
+body.light-mode .card a,
+body.light-mode article a{
+    color: #00b36b !important;
+    background: rgba(0, 179, 107, 0.08);
+}
+body.light-mode .card a:hover,
+body.light-mode article a:hover{
+    background: rgba(0, 179, 107, 0.2);
+}
+body.light-mode .card > span:first-of-type{
+    color: #0088cc;
+    background: rgba(0, 136, 204, 0.08);
+    border-color: rgba(0, 136, 204, 0.25);
+}
+body.light-mode .result{
+    background: rgba(255,255,255,0.8);
+    border-color: rgba(0,0,0,0.08);
+}
+body.light-mode .result:hover{
+    background: #ffffff;
+    border-color: #00b36b;
+}
+body.light-mode .result b{ color: #00b36b; }
+body.light-mode .result small{ color: #0088cc; }
+body.light-mode .result span{ color: #5a6270; }
+body.light-mode .about h2{ color: #00b36b; }
+body.light-mode .about p{ color: #5a6270; }
+body.light-mode footer{
+    background: rgba(255,255,255,0.9);
+    border-top-color: rgba(0, 179, 107, 0.2);
+    color: #5a6270;
+}
+body.light-mode ::-webkit-scrollbar-track{
+    background: #f5f7fa;
+}
+body.light-mode ::-webkit-scrollbar-thumb{
+    background: #b0b8c4;
+}
+body.light-mode ::-webkit-scrollbar-thumb:hover{
+    background: #00b36b;
+}
+body.light-mode .theme-toggle{
+    background: rgba(255,255,255,0.8);
+    color: #1a1a2e;
+    border-color: rgba(0, 179, 107, 0.3);
+}
+body.light-mode .theme-toggle:hover{
+    border-color: #00b36b;
+    background: rgba(0, 179, 107, 0.1);
+    box-shadow: 0 0 20px rgba(0, 179, 107, 0.3);
+}
+
 /* ===== ریسپانسیو موبایل ===== */
 @media (max-width: 640px){
     nav{
@@ -423,10 +604,17 @@ footer {
         flex-direction: column;
         gap: 12px;
         padding: 12px 0;
+        position: relative;
     }
     .menu{gap: 16px; font-size: 13px;}
     .search{flex-direction: column;}
     .search button{padding: 14px 20px;}
     .cards{grid-template-columns: 1fr;}
     section{padding: 50px 0;}
-            }
+    .theme-toggle{
+        position: absolute;
+        top: 20px;
+        left: 16px;
+        margin-right: 0;
+    }
+}
