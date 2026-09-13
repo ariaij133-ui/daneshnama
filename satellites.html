@@ -651,4 +651,61 @@ body.light-mode .back-btn {
 <div class="related-section">
 <h3>📚 مقالات مرتبط</h3>
 <div class="related-grid">
-<div class="
+<div class="related-card">
+<a href="iss.html">ایستگاه فضایی بین‌المللی</a>
+<p>آزمایشگاهی مداری برای پژوهش‌های علمی.</p>
+</div>
+<div class="related-card">
+<a href="webb.html">جیمز وب</a>
+<p>تلسکوپی فروسرخ برای مطالعه جهان دور.</p>
+</div>
+<div class="related-card">
+<a href="hubble.html">هابل</a>
+<p>یکی از مشهورترین تلسکوپ‌های فضایی.</p>
+</div>
+<div class="related-card">
+<a href="ai.html">هوش مصنوعی</a>
+<p>روش‌هایی برای ساخت سامانه‌های هوشمند.</p>
+</div>
+</div>
+</div>
+
+<a href="index.html" class="back-btn">← بازگشت به خانه</a>
+
+</div>
+</article>
+
+</div>
+</section>
+</main>
+
+<footer>
+© 2026 دانش‌نما — وب‌سایت آموزشی علم و دانش
+</footer>
+
+<script>
+function applyTheme(theme){
+    const btn = document.getElementById('themeToggle');
+    if(theme === 'light'){
+        document.body.classList.add('light-mode');
+        if(btn) btn.innerHTML = '☀️';
+    } else {
+        document.body.classList.remove('light-mode');
+        if(btn) btn.innerHTML = '🌙';
+    }
+}
+function toggleTheme(){
+    const isLight = document.body.classList.contains('light-mode');
+    const newTheme = isLight ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
+    document.documentElement.classList.remove('light-mode-preload');
+});
+</script>
+
+</body>
+                             </html>
