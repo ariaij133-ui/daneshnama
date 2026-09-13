@@ -37,7 +37,12 @@
 <meta name="description" content="دانش‌نما؛ دانشنامه فارسی علم، نجوم، فضا، فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.">
 <meta name="robots" content="index,follow">
 
+<!-- ===== Canonical ===== -->
+<link rel="canonical" href="https://ariaij133-ui.github.io/daneshnama/">
+
 <title>دانش‌نما | دانشنامه علم و فضا</title>
+
+<link rel="icon" type="image/svg+xml" href="logo.svg">
 
 <link rel="stylesheet" href="style.css">
 
@@ -78,6 +83,35 @@
     width: 92%;
 }
 
+/* ===== لوگو ===== */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+.logo-img {
+    height: 42px;
+    width: 42px;
+    transition: transform 0.3s ease;
+}
+.logo-link:hover .logo-img {
+    transform: rotate(15deg) scale(1.1);
+}
+.logo-text {
+    font-size: 22px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #00ff88, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+}
+.logo-text b {
+    -webkit-text-fill-color: #d1d5db;
+    color: #d1d5db;
+}
+
 /* جلوگیری از پرش رنگ قبل از لود کامل */
 .light-mode-preload body {
     background-color: #f5f7fa;
@@ -91,8 +125,9 @@
 <header>
 <div class="container nav">
 
-<a class="logo" href="index.html">
-دانش‌نما <b>| علم و دانش</b>
+<a href="index.html" class="logo-link">
+    <img src="logo.svg" alt="دانش‌نما" class="logo-img">
+    <span class="logo-text">دانش‌نما <b>| علم و دانش</b></span>
 </a>
 
 <nav class="menu">
