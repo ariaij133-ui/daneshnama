@@ -2,7 +2,6 @@
 <html lang="fa" dir="rtl">
 <head>
 <script>
-    // جلوگیری از پرش رنگ در حالت روشن
     (function(){
         const savedTheme = localStorage.getItem('theme');
         if(savedTheme === 'light'){
@@ -61,6 +60,8 @@
 .card img:not([src]) {
     display: none;
 }
+
+/* ===== جایگاه تبلیغاتی ===== */
 .yektanet-ad-wrapper {
     grid-column: 1 / -1;
     margin: 25px 0;
@@ -70,6 +71,11 @@
     border-radius: 12px;
     text-align: center;
     min-height: 100px;
+}
+.yektanet-ad-wrapper.bottom-ad {
+    max-width: 1160px;
+    margin: 30px auto 0;
+    width: 92%;
 }
 
 /* جلوگیری از پرش رنگ قبل از لود کامل */
@@ -241,6 +247,7 @@ autocomplete="off"
 </article>
 
 
+<!-- ===== تبلیغ وسط کارت‌ها (جایگاه قبلی) ===== -->
 <div class="yektanet-ad-wrapper">
     <div class="yn-bnr" id="ynpos-20477"></div>
 </div>
@@ -502,6 +509,14 @@ autocomplete="off"
 
 </section>
 
+
+
+<!-- ===== تبلیغ پایین صفحه (جایگاه جدید) ===== -->
+<div class="yektanet-ad-wrapper bottom-ad">
+    <div class="yn-bnr" id="ynpos-20479"></div>
+</div>
+
+
 </main>
 
 
@@ -642,14 +657,12 @@ function toggleTheme(){
     applyTheme(newTheme);
 }
 
-// اعمال تم اولیه بعد از لود
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     applyTheme(savedTheme);
     document.documentElement.classList.remove('light-mode-preload');
 });
 
-// اگه کاربر تم سیستمش رو تغییر داد و انتخابی نکرده
 if(window.matchMedia){
     window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
         if(!localStorage.getItem('theme')){
