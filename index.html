@@ -37,7 +37,6 @@
 <meta name="description" content="دانش‌نما؛ دانشنامه فارسی علم، نجوم، فضا، فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.">
 <meta name="robots" content="index,follow">
 
-<!-- ===== Canonical ===== -->
 <link rel="canonical" href="https://ariaij133-ui.github.io/daneshnama/">
 
 <title>دانش‌نما | دانشنامه علم و فضا</title>
@@ -47,7 +46,6 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
-/* ===== استایل اختصاصی تصاویر کارت‌ها ===== */
 .card img {
     width: 100%;
     height: 160px;
@@ -66,7 +64,6 @@
     display: none;
 }
 
-/* ===== جایگاه تبلیغاتی ===== */
 .yektanet-ad-wrapper {
     grid-column: 1 / -1;
     margin: 25px 0;
@@ -83,7 +80,6 @@
     width: 92%;
 }
 
-/* ===== لوگو ===== */
 .logo-link {
     display: flex;
     align-items: center;
@@ -112,7 +108,6 @@
     color: #d1d5db;
 }
 
-/* جلوگیری از پرش رنگ قبل از لود کامل */
 .light-mode-preload body {
     background-color: #f5f7fa;
     color: #1a1a2e;
@@ -153,36 +148,22 @@
 
 <h1>دنیای علم را <strong class="highlight">کشف کن</strong></h1>
 
-<p>
-از فضا و سیاه‌چاله‌ها تا فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.
-</p>
-
+<p>از فضا و سیاه‌چاله‌ها تا فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.</p>
 
 <div class="search" id="search">
-
-<input
-id="q"
-placeholder="سیاه‌چاله، DNA، مریخ، فیزیک کوانتومی..."
-autocomplete="off"
->
-
+<input id="q" placeholder="سیاه‌چاله، DNA، مریخ، فیزیک کوانتومی..." autocomplete="off">
 <button type="button" onclick="searchSite()">جستجو</button>
-
 </div>
-
 
 <div id="results"></div>
 
-
 <div class="filters">
-
 <button data-filter="همه">همه</button>
 <button data-filter="نجوم">نجوم</button>
 <button data-filter="فیزیک">فیزیک</button>
 <button data-filter="زیست‌شناسی">زیست‌شناسی</button>
 <button data-filter="زمین‌شناسی">زمین‌شناسی</button>
 <button data-filter="فناوری">فناوری</button>
-
 </div>
 
 </div>
@@ -191,50 +172,34 @@ autocomplete="off"
 
 
 <section id="categories" class="categories">
-
 <div class="container">
-
 <h2>دسته‌های علمی</h2>
-
 <div class="categoryGrid">
-
 <button data-filter="نجوم">🌌 نجوم و کیهان</button>
 <button data-filter="فیزیک">⚛️ فیزیک</button>
 <button data-filter="زیست‌شناسی">🧬 زیست‌شناسی</button>
 <button data-filter="زمین‌شناسی">🌍 زمین‌شناسی</button>
 <button data-filter="فناوری">🤖 فناوری</button>
 <button data-filter="فضا">🚀 فضا</button>
-
 </div>
-
 </div>
 </section>
 
 
 
 <section id="topics">
-
 <div class="container">
 
 <div class="head">
-
 <h2>موضوعات علمی</h2>
-
-<p>
-صفحات دانش‌نما شامل موضوعات علمی گوناگون در زمینه فضا، فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری است.
-</p>
-
+<p>صفحات دانش‌نما شامل موضوعات علمی گوناگون در زمینه فضا، فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری است.</p>
 </div>
 
-
-<!-- ===== تبلیغ بالای کارت‌ها (20479) ===== -->
 <div class="yektanet-ad-wrapper">
     <div class="yn-bnr" id="ynpos-20479"></div>
 </div>
 
-
 <div class="cards">
-
 
 <article class="card" data-cat="فضا">
 <img src="voyager-1.jpg" alt="ویجر ۱" loading="lazy" onerror="this.style.display='none'">
@@ -244,7 +209,6 @@ autocomplete="off"
 <a href="voyager-1.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="فضا">
 <img src="voyager-2.jpg" alt="ویجر ۲" loading="lazy" onerror="this.style.display='none'">
 <span>فضا</span>
@@ -252,7 +216,6 @@ autocomplete="off"
 <p>مأموریتی تاریخی برای بررسی مشتری، زحل، اورانوس و نپتون.</p>
 <a href="voyager-2.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="نجوم">
 <img src="black-holes.jpg" alt="سیاه‌چاله‌ها" loading="lazy" onerror="this.style.display='none'">
@@ -262,7 +225,6 @@ autocomplete="off"
 <a href="black-holes.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="فناوری">
 <img src="satellites.jpg" alt="ماهواره‌ها" loading="lazy" onerror="this.style.display='none'">
 <span>فناوری فضایی</span>
@@ -270,7 +232,6 @@ autocomplete="off"
 <p>برای ارتباطات، ناوبری، هواشناسی و پژوهش استفاده می‌شوند.</p>
 <a href="satellites.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="نجوم">
 <img src="mars.jpg" alt="مریخ" loading="lazy" onerror="this.style.display='none'">
@@ -280,7 +241,6 @@ autocomplete="off"
 <a href="mars.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="نجوم">
 <img src="sun.jpg" alt="خورشید" loading="lazy" onerror="this.style.display='none'">
 <span>ستاره‌شناسی</span>
@@ -289,12 +249,9 @@ autocomplete="off"
 <a href="sun.html">صفحه اختصاصی ←</a>
 </article>
 
-
-<!-- ===== تبلیغ وسط کارت‌ها (20477) ===== -->
 <div class="yektanet-ad-wrapper">
     <div class="yn-bnr" id="ynpos-20477"></div>
 </div>
-
 
 <article class="card" data-cat="نجوم">
 <img src="milky-way.jpg" alt="راه شیری" loading="lazy" onerror="this.style.display='none'">
@@ -304,7 +261,6 @@ autocomplete="off"
 <a href="milky-way.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="نجوم">
 <img src="stars.jpg" alt="ستاره‌ها" loading="lazy" onerror="this.style.display='none'">
 <span>ستاره‌شناسی</span>
@@ -312,7 +268,6 @@ autocomplete="off"
 <p>جرم‌های درخشانی که انرژی خود را از فرایندهای هسته‌ای می‌گیرند.</p>
 <a href="stars.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="فضا">
 <img src="webb.jpg" alt="جیمز وب" loading="lazy" onerror="this.style.display='none'">
@@ -322,7 +277,6 @@ autocomplete="off"
 <a href="webb.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="فضا">
 <img src="hubble.jpg" alt="هابل" loading="lazy" onerror="this.style.display='none'">
 <span>رصدخانه فضایی</span>
@@ -330,7 +284,6 @@ autocomplete="off"
 <p>یکی از مشهورترین تلسکوپ‌های فضایی.</p>
 <a href="hubble.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="فضا">
 <img src="iss.jpg" alt="ایستگاه فضایی بین‌المللی" loading="lazy" onerror="this.style.display='none'">
@@ -340,7 +293,6 @@ autocomplete="off"
 <a href="iss.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="نجوم">
 <img src="solar-system.jpg" alt="منظومه شمسی" loading="lazy" onerror="this.style.display='none'">
 <span>نجوم</span>
@@ -349,8 +301,6 @@ autocomplete="off"
 <a href="solar-system.html">صفحه اختصاصی ←</a>
 </article>
 
-
-<!-- کارت جدید: مغز -->
 <article class="card" data-cat="زیست‌شناسی">
 <img src="brain.jpg" alt="مغز" loading="lazy" onerror="this.style.display='none'">
 <span>زیست‌شناسی</span>
@@ -359,6 +309,55 @@ autocomplete="off"
 <a href="brain.html">صفحه اختصاصی ←</a>
 </article>
 
+<!-- ===== مقالات جدید ===== -->
+
+<article class="card" data-cat="نجوم">
+<img src="wormholes.jpg" alt="کرم‌چاله" loading="lazy" onerror="this.style.display='none'">
+<span>نجوم</span>
+<h3>کرم‌چاله</h3>
+<p>پلی فرضی در فضا-زمان که دو نقطه دور از هم را به هم متصل می‌کند.</p>
+<a href="wormholes.html">صفحه اختصاصی ←</a>
+</article>
+
+<article class="card" data-cat="نجوم">
+<img src="dark-matter.jpg" alt="ماده تاریک" loading="lazy" onerror="this.style.display='none'">
+<span>کیهان‌شناسی</span>
+<h3>ماده تاریک</h3>
+<p>ماده نامرئی که حدود ۲۷٪ از کیهان را تشکیل می‌دهد.</p>
+<a href="dark-matter.html">صفحه اختصاصی ←</a>
+</article>
+
+<article class="card" data-cat="نجوم">
+<img src="big-bang.jpg" alt="بیگ بنگ" loading="lazy" onerror="this.style.display='none'">
+<span>کیهان‌شناسی</span>
+<h3>بیگ بنگ</h3>
+<p>نظریه‌ای که توضیح می‌دهد جهان چگونه آغاز شده است.</p>
+<a href="big-bang.html">صفحه اختصاصی ←</a>
+</article>
+
+<article class="card" data-cat="فناوری">
+<img src="nuclear-energy.jpg" alt="انرژی هسته‌ای" loading="lazy" onerror="this.style.display='none'">
+<span>فناوری</span>
+<h3>انرژی هسته‌ای</h3>
+<p>قدرتمندترین منبع انرژی بشر که از هسته اتم آزاد می‌شود.</p>
+<a href="nuclear-energy.html">صفحه اختصاصی ←</a>
+</article>
+
+<article class="card" data-cat="فناوری">
+<img src="5g.jpg" alt="فناوری ۵G" loading="lazy" onerror="this.style.display='none'">
+<span>فناوری</span>
+<h3>فناوری ۵G</h3>
+<p>نسل پنجم اینترنت پرسرعت با تأخیر فوق‌العاده کم.</p>
+<a href="5g.html">صفحه اختصاصی ←</a>
+</article>
+
+<article class="card" data-cat="فناوری">
+<img src="vr.jpg" alt="واقعیت مجازی" loading="lazy" onerror="this.style.display='none'">
+<span>فناوری</span>
+<h3>واقعیت مجازی</h3>
+<p>فناوری‌ای که کاربر را در دنیای دیجیتال غرق می‌کند.</p>
+<a href="vr.html">صفحه اختصاصی ←</a>
+</article>
 
 </div>
 
@@ -384,7 +383,6 @@ autocomplete="off"
 
 <div class="cards" id="moreCards" style="display:none; margin-top: 30px;">
 
-
 <article class="card" data-cat="نجوم">
 <img src="moon.jpeg" alt="ماه" loading="lazy" onerror="this.style.display='none'">
 <span>نجوم</span>
@@ -392,7 +390,6 @@ autocomplete="off"
 <p>ماه قمر طبیعی زمین است و در جزر و مد نقش دارد.</p>
 <a href="moon.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="فیزیک">
 <img src="atom.jpg" alt="اتم" loading="lazy" onerror="this.style.display='none'">
@@ -402,7 +399,6 @@ autocomplete="off"
 <a href="atom.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="فیزیک">
 <img src="quantum.jpg" alt="فیزیک کوانتومی" loading="lazy" onerror="this.style.display='none'">
 <span>فیزیک</span>
@@ -410,7 +406,6 @@ autocomplete="off"
 <p>شاخه‌ای از فیزیک برای بررسی ماده و انرژی در مقیاس بسیار کوچک.</p>
 <a href="quantum.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="فیزیک">
 <img src="relativity.jpg" alt="نسبیت" loading="lazy" onerror="this.style.display='none'">
@@ -420,7 +415,6 @@ autocomplete="off"
 <a href="relativity.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="فیزیک">
 <img src="light.jpg" alt="نور" loading="lazy" onerror="this.style.display='none'">
 <span>فیزیک</span>
@@ -428,7 +422,6 @@ autocomplete="off"
 <p>نوعی تابش الکترومغناطیسی.</p>
 <a href="light.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="زیست‌شناسی">
 <img src="dna.jpg" alt="DNA" loading="lazy" onerror="this.style.display='none'">
@@ -438,7 +431,6 @@ autocomplete="off"
 <a href="dna.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="زیست‌شناسی">
 <img src="cell.jpg" alt="سلول" loading="lazy" onerror="this.style.display='none'">
 <span>زیست‌شناسی</span>
@@ -446,7 +438,6 @@ autocomplete="off"
 <p>کوچک‌ترین واحد ساختاری و عملکردی بسیاری از جانداران.</p>
 <a href="cell.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="زیست‌شناسی">
 <img src="evolution.jpg" alt="تکامل" loading="lazy" onerror="this.style.display='none'">
@@ -456,7 +447,6 @@ autocomplete="off"
 <a href="evolution.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="زمین‌شناسی">
 <img src="volcanoes.jpg" alt="آتشفشان" loading="lazy" onerror="this.style.display='none'">
 <span>زمین‌شناسی</span>
@@ -464,7 +454,6 @@ autocomplete="off"
 <p>ساختاری که مواد داغ و گازهای درون زمین می‌توانند از آن خارج شوند.</p>
 <a href="volcanoes.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="زمین‌شناسی">
 <img src="earthquakes.jpg" alt="زلزله" loading="lazy" onerror="this.style.display='none'">
@@ -474,7 +463,6 @@ autocomplete="off"
 <a href="earthquakes.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="فناوری">
 <img src="ai.jpg" alt="هوش مصنوعی" loading="lazy" onerror="this.style.display='none'">
 <span>فناوری</span>
@@ -482,7 +470,6 @@ autocomplete="off"
 <p>روش‌هایی برای ساخت سامانه‌هایی که وظایفی مانند تشخیص الگو و پردازش زبان را انجام می‌دهند.</p>
 <a href="ai.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="فناوری">
 <img src="robotics.jpg" alt="رباتیک" loading="lazy" onerror="this.style.display='none'">
@@ -492,7 +479,6 @@ autocomplete="off"
 <a href="robotics.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="فناوری">
 <img src="internet.jpg" alt="اینترنت" loading="lazy" onerror="this.style.display='none'">
 <span>فناوری</span>
@@ -500,7 +486,6 @@ autocomplete="off"
 <p>شبکه‌ای جهانی از شبکه‌های به‌هم‌پیوسته برای تبادل داده.</p>
 <a href="internet.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="زمین‌شناسی">
 <img src="earth.jpg" alt="زمین" loading="lazy" onerror="this.style.display='none'">
@@ -510,7 +495,6 @@ autocomplete="off"
 <a href="earth.html">صفحه اختصاصی ←</a>
 </article>
 
-
 <article class="card" data-cat="نجوم">
 <img src="galaxies.jpg" alt="کهکشان‌ها" loading="lazy" onerror="this.style.display='none'">
 <span>نجوم</span>
@@ -518,7 +502,6 @@ autocomplete="off"
 <p>سامانه‌های عظیمی از ستاره‌ها، گاز، غبار و ماده تاریک.</p>
 <a href="galaxies.html">صفحه اختصاصی ←</a>
 </article>
-
 
 <article class="card" data-cat="زمین‌شناسی">
 <img src="oceans.jpg" alt="اقیانوس‌ها" loading="lazy" onerror="this.style.display='none'">
@@ -528,9 +511,7 @@ autocomplete="off"
 <a href="oceans.html">صفحه اختصاصی ←</a>
 </article>
 
-
 </div>
-
 
 </div>
 </div>
@@ -539,26 +520,17 @@ autocomplete="off"
 
 
 <section class="about">
-
 <div class="container">
-
 <h2>دانش‌نما در مسیر یک دانشنامه بزرگ</h2>
-
-<p>
-ساختار جدید جستجوی سریع، دسته‌بندی و موضوعات بیشتری دارد و می‌توانیم در مرحله بعد صدها مقاله مستقل به آن اضافه کنیم.
-</p>
-
+<p>ساختار جدید جستجوی سریع، دسته‌بندی و موضوعات بیشتری دارد و می‌توانیم در مرحله بعد صدها مقاله مستقل به آن اضافه کنیم.</p>
 </div>
-
 </section>
 
 
 
-<!-- ===== تبلیغ آخر سایت (20480) ===== -->
 <div class="yektanet-ad-wrapper bottom-ad">
     <div class="yn-bnr" id="ynpos-20480"></div>
 </div>
-
 
 </main>
 
@@ -601,11 +573,16 @@ const data = [
 { title:"اینترنت", cat:"فناوری", url:"internet.html", desc:"شبکه‌ای جهانی از شبکه‌های به‌هم‌پیوسته برای تبادل داده." },
 { title:"زمین", cat:"زمین‌شناسی", url:"earth.html", desc:"سیاره‌ای که زندگی شناخته‌شده روی آن وجود دارد." },
 { title:"کهکشان‌ها", cat:"نجوم", url:"galaxies.html", desc:"سامانه‌های عظیمی از ستاره‌ها، گاز، غبار و ماده تاریک." },
-{ title:"اقیانوس‌ها", cat:"زمین‌شناسی", url:"oceans.html", desc:"بخش بزرگی از سطح زمین را آب‌های اقیانوسی پوشانده‌اند." }
+{ title:"اقیانوس‌ها", cat:"زمین‌شناسی", url:"oceans.html", desc:"بخش بزرگی از سطح زمین را آب‌های اقیانوسی پوشانده‌اند." },
+{ title:"کرم‌چاله", cat:"نجوم", url:"wormholes.html", desc:"پلی فرضی در فضا-زمان که دو نقطه دور از هم را به هم متصل می‌کند." },
+{ title:"ماده تاریک", cat:"کیهان‌شناسی", url:"dark-matter.html", desc:"ماده نامرئی که حدود ۲۷٪ از کیهان را تشکیل می‌دهد." },
+{ title:"بیگ بنگ", cat:"کیهان‌شناسی", url:"big-bang.html", desc:"نظریه‌ای که توضیح می‌دهد جهان چگونه آغاز شده است." },
+{ title:"انرژی هسته‌ای", cat:"فناوری", url:"nuclear-energy.html", desc:"قدرتمندترین منبع انرژی بشر که از هسته اتم آزاد می‌شود." },
+{ title:"فناوری ۵G", cat:"فناوری", url:"5g.html", desc:"نسل پنجم اینترنت پرسرعت با تأخیر فوق‌العاده کم." },
+{ title:"واقعیت مجازی", cat:"فناوری", url:"vr.html", desc:"فناوری‌ای که کاربر را در دنیای دیجیتال غرق می‌کند." }
 ];
 
 
-// ===== جستجو =====
 const input = document.getElementById("q");
 const results = document.getElementById("results");
 
@@ -641,7 +618,6 @@ if(input){
 }
 
 
-// ===== فیلتر کارت‌ها =====
 function filterCards(cat){
     document.querySelectorAll(".card").forEach(card => {
         const category = card.dataset.cat;
@@ -658,13 +634,11 @@ function filterCards(cat){
 }
 
 
-// ===== وصل کردن دکمه‌های فیلتر =====
 document.querySelectorAll("[data-filter]").forEach(btn => {
     btn.addEventListener("click", () => filterCards(btn.dataset.filter));
 });
 
 
-// ===== دکمه مشاهده بیشتر =====
 function loadMore() {
     const moreCards = document.getElementById('moreCards');
     const btn = document.getElementById('loadMoreBtn');
@@ -681,7 +655,6 @@ function loadMore() {
 }
 
 
-// ===== تغییر تم (Dark/Light) =====
 function applyTheme(theme){
     const btn = document.getElementById('themeToggle');
     if(theme === 'light'){
