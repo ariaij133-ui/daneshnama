@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         midAd.style.border = '1px dashed rgba(0, 255, 136, 0.3)';
         midAd.style.borderRadius = '12px';
         midAd.style.textAlign = 'center';
-        midAd.style.minHeight = '250px';
+        midAd.style.minHeight = '300px';
         midAd.innerHTML = '<div class="yn-bnr" id="ynpos-20500"></div>';
         midParagraph.parentNode.insertBefore(midAd, midParagraph.nextSibling);
     }
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         endAd.style.border = '1px dashed rgba(0, 255, 136, 0.3)';
         endAd.style.borderRadius = '12px';
         endAd.style.textAlign = 'center';
-        endAd.style.minHeight = '250px';
+        endAd.style.minHeight = '300px';
         endAd.innerHTML = '<div class="yn-bnr" id="ynpos-20501"></div>';
         relatedSection.parentNode.insertBefore(endAd, relatedSection);
     }
