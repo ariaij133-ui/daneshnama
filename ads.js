@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const articleBody = document.querySelector('.article-page');
     if (!articleBody) return;
     
-    // ===== تبلیغ وسط مقاله =====
+    // ===== تبلیغ وسط مقاله (20500) =====
     const paragraphs = articleBody.querySelectorAll('p');
     if (paragraphs.length > 5) {
         const midParagraph = paragraphs[Math.floor(paragraphs.length / 2)];
@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
         midAd.style.borderRadius = '12px';
         midAd.style.textAlign = 'center';
         midAd.style.minHeight = '100px';
-        midAd.innerHTML = '<div class="yn-bnr" id="ynpos-20481"></div>';
+        midAd.innerHTML = '<div class="yn-bnr" id="ynpos-20500"></div>';
         midParagraph.parentNode.insertBefore(midAd, midParagraph.nextSibling);
     }
     
-    // ===== تبلیغ آخر مقاله =====
+    // ===== تبلیغ آخر مقاله (20501) =====
     const relatedSection = articleBody.querySelector('.related-box') || 
                           articleBody.querySelector('h2:last-of-type');
     if (relatedSection) {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         endAd.style.borderRadius = '12px';
         endAd.style.textAlign = 'center';
         endAd.style.minHeight = '100px';
-        endAd.innerHTML = '<div class="yn-bnr" id="ynpos-20482"></div>';
+        endAd.innerHTML = '<div class="yn-bnr" id="ynpos-20501"></div>';
         relatedSection.parentNode.insertBefore(endAd, relatedSection);
     }
 });
