@@ -1,0 +1,40 @@
+name: Add Ads Script to Articles
+
+on:
+  push:
+    paths:
+      - '*.html'
+  workflow_dispatch:
+
+jobs:
+  add-ads:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Add ads.js to HTML files
+        run: |
+          for file in *.html; do
+            if [ "$file" != "index.html" ] && [ "$file" != "index-en.html" ]; then
+              if ! grep -q "ads.js" "$file"; then
+                sed -i 's|</head>|<script src="ads.js" defer></script>\n</head>|' "$file"
+                echo "Added ads.js to $file"
+              fi
+            fi
+          done
+      
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add *.html
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-add ads.js to articles"
+            git push
+          fi
