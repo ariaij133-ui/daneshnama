@@ -1,0 +1,32 @@
+name: Add Giscus Comments
+
+on:
+  workflow_dispatch:
+
+jobs:
+  add-comments:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Add Giscus to HTML files
+        run: |
+          for file in *.html; do
+            if [ "$file" != "index.html" ] && [ "$file" != "index-en.html" ]; then
+              if ! grep -q "giscus.app" "$file"; then
+                sed -i 's|</head>|<style>\n.comments-section { max-width: 900px; margin: 50px auto 0; padding: 30px 20px 0; border-top: 1px solid rgba(0,255,136,0.2); }\n.comments-section h2 { color: #00ff88; font-size: 24px; margin-bottom: 20px; padding-right: 12px; border-right: 4px solid #00ff88; }\n</style>\n</head>|' "$file"
+                sed -i 's|</main>|<div class="comments-section"><h2>دیدگاه‌ها</h2><script src="https://giscus.app/client.js" data-repo="ariaij133-ui/daneshnama" data-repo-id="R_kgDOUWJSyA" data-category="Announcements" data-category-id="DIC_kwDOUWJSyM4DFjeE" data-mapping="pathname" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="fa" data-loading="lazy" crossorigin="anonymous" async></script></div>\n</main>|' "$file"
+                echo "✅ کد به $file اضافه شد"
+              fi
+            fi
+          done
+      
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add *.html
+          git diff --staged --quiet || git commit -m "Add Giscus comments to all articles"
+          git push
