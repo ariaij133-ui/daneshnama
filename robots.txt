@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ariaij133-ui.github.io/daneshnama/sitemap.xml
+Sitemap: https://danesh-nama.ir/sitemap.xml
