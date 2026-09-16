@@ -37,7 +37,16 @@
 <meta name="description" content="دانش‌نما؛ دانشنامه فارسی علم، نجوم، فضا، فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.">
 <meta name="robots" content="index,follow">
 
-<link rel="canonical" href="https://ariaij133-ui.github.io/daneshnama/">
+<!-- ===== Canonical خودکار ===== -->
+<link rel="canonical" href="https://danesh-nama.ir/">
+<script>
+(function(){
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if(canonical){
+        canonical.setAttribute('href', window.location.origin + window.location.pathname);
+    }
+})();
+</script>
 
 <title>دانش‌نما | دانشنامه علم و فضا</title>
 
