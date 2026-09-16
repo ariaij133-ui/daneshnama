@@ -1,0 +1,29 @@
+name: Update Giscus Theme
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-comments:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Update Giscus theme to dark
+        run: |
+          for file in *.html; do
+            if grep -q "giscus.app" "$file"; then
+              sed -i 's|data-theme="light"|data-theme="dark"|g' "$file"
+              echo "✅ تم $file عوض شد"
+            fi
+          done
+      
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add *.html
+          git diff --staged --quiet || git commit -m "Change Giscus theme to dark"
+          git push
