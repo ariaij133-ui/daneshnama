@@ -146,12 +146,12 @@
 
 <div class="tag">نسخه ارتقایافته دانش‌نما</div>
 
-<h1>دنیای علم را <strong class="highlight">کشف کن</strong></h1>
+<h1>دنیای <strong class="highlight">دانش</strong> را کشف کن</h1>
 
-<p>از فضا و سیاه‌چاله‌ها تا فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری.</p>
+<p>از علم و فضا تا سلامت، فناوری و مهارت‌های زندگی — هر چیزی که برای رشد و یادگیری نیاز داری.</p>
 
 <div class="search" id="search">
-<input id="q" placeholder="سیاه‌چاله، DNA، مریخ، فیزیک کوانتومی..." autocomplete="off">
+<input id="q" placeholder="سیاه‌چاله، DNA، مریخ، کاهش وزن، هوش مصنوعی..." autocomplete="off">
 <button type="button" onclick="searchSite()">جستجو</button>
 </div>
 
@@ -165,6 +165,7 @@
 <button data-filter="زمین‌شناسی">زمین‌شناسی</button>
 <button data-filter="فناوری">فناوری</button>
 <button data-filter="سلامت">سلامت</button>
+<button data-filter="کسب درآمد">💰 کسب درآمد</button>
 </div>
 
 </div>
@@ -183,6 +184,7 @@
 <button data-filter="فناوری">🤖 فناوری</button>
 <button data-filter="فضا">🚀 فضا</button>
 <button data-filter="سلامت">❤️ سلامت</button>
+<button data-filter="کسب درآمد">💰 کسب درآمد</button>
 </div>
 </div>
 </section>
@@ -194,7 +196,7 @@
 
 <div class="head">
 <h2>موضوعات علمی</h2>
-<p>صفحات دانش‌نما شامل موضوعات علمی گوناگون در زمینه فضا، فیزیک، زیست‌شناسی، زمین‌شناسی و فناوری است.</p>
+<p>صفحات دانش‌نما شامل موضوعات علمی گوناگون در زمینه فضا، فیزیک، زیست‌شناسی، زمین‌شناسی، فناوری، سلامت و کسب درآمد است.</p>
 </div>
 
 <div class="yektanet-ad-wrapper">
@@ -425,7 +427,7 @@
 
 <!-- ===== ۵ مقاله جدید ===== -->
 
-<article class="card" data-cat="فناوری">
+<article class="card" data-cat="کسب درآمد">
 <img src="make-money-online.jpg" alt="کسب درآمد از اینترنت" loading="lazy" onerror="this.style.display='none'">
 <span>کسب درآمد</span>
 <h3>چطور از اینترنت پول دربیارم؟</h3>
@@ -694,7 +696,7 @@ const data = [
 { title:"چطور قند خون را کنترل کنیم؟", cat:"سلامت", url:"blood-sugar.html", desc:"راهنمای کامل و علمی مدیریت قند خون." },
 { title:"چطور حافظه را تقویت کنیم؟", cat:"سلامت", url:"memory-improvement.html", desc:"راهنمای کامل و علمی بهبود حافظه و یادگیری." },
 { title:"چطور اعتماد به نفس را افزایش دهیم؟", cat:"سلامت", url:"self-confidence.html", desc:"راهنمای کامل و علمی تقویت اعتماد به نفس." },
-{ title:"چطور از اینترنت پول دربیارم؟", cat:"فناوری", url:"make-money-online.html", desc:"۱۵ روش واقعی کسب درآمد آنلاین." },
+{ title:"چطور از اینترنت پول دربیارم؟", cat:"کسب درآمد", url:"make-money-online.html", desc:"۱۵ روش واقعی کسب درآمد آنلاین." },
 { title:"چطور موبایلم را سریع‌تر کنم؟", cat:"فناوری", url:"speed-up-phone.html", desc:"۱۵ روش علمی برای افزایش سرعت گوشی." },
 { title:"چطور بهتر درس بخونم؟", cat:"سلامت", url:"study-better.html", desc:"۱۵ روش علمی برای مطالعه مؤثر و یادگیری عمیق." },
 { title:"آیا حیات فرازمینی وجود دارد؟", cat:"نجوم", url:"alien-life.html", desc:"شواهد علمی و احتمالات وجود موجودات فضایی." },
@@ -743,7 +745,8 @@ function filterCards(cat){
         const show = (
             cat === "همه" ||
             category === cat ||
-            (cat === "فناوری" && category === "فناوری فضایی")
+            (cat === "فناوری" && category === "فناوری فضایی") ||
+            (cat === "کسب درآمد" && category === "کسب درآمد")
         );
         card.style.display = show ? "" : "none";
     });
