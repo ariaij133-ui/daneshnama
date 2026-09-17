@@ -1,0 +1,37 @@
+name: Change Comments to Dark Mode
+
+on:
+  workflow_dispatch:
+
+jobs:
+  change-comments:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Change comments color to dark
+        run: |
+          for file in *.html; do
+            if [ "$file" != "index.html" ] && [ "$file" != "index-en.html" ]; then
+              
+              # تغییر رنگ کامنت‌ها از سفید به تیره
+              # این دستور CSS مربوط به کامنت‌ها را تغییر می‌دهد
+              sed -i 's/\.comment[^{]*{[^}]*color:\s*#fff/\.comment\1{color: #1a1a1a/g' "$file"
+              sed -i 's/\.comment[^{]*{[^}]*color:\s*white/\.comment\1{color: #1a1a1a/g' "$file"
+              
+              # اگر کامنت‌ها با کلاس دیگری هستند، اینجا اضافه کنید
+              # مثلاً .comments یا #comments یا .comment-box
+              
+              echo "تغییر کرد: $file"
+            fi
+          done
+      
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add *.html
+          git diff --staged --quiet || git commit -m "Change comments color to dark mode"
+          git push
