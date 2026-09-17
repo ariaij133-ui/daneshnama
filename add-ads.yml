@@ -1,4 +1,4 @@
-name: Add Ads Script to Articles
+name: Add Ads Script and Placements to Articles
 
 on:
   push:
@@ -16,14 +16,29 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Add ads.js to HTML files
+      - name: Add ads.js and ad placements to HTML files
         run: |
           for file in *.html; do
             if [ "$file" != "index.html" ] && [ "$file" != "index-en.html" ]; then
+              
+              # اضافه کردن ads.js به head
               if ! grep -q "ads.js" "$file"; then
                 sed -i 's|</head>|<script src="ads.js" defer></script>\n</head>|' "$file"
-                echo "Added ads.js to $file"
+                echo "✅ ads.js به $file اضافه شد"
               fi
+              
+              # اضافه کردن جایگاه تبلیغ وسط مقاله (اگه نباشه)
+              if ! grep -q "ynpos-20479" "$file"; then
+                sed -i 's|</main>|<div class="yektanet-ad-wrapper" style="margin: 30px 0;"><div class="yn-bnr" id="ynpos-20479"></div></div>\n</main>|' "$file"
+                echo "✅ جایگاه 20479 به $file اضافه شد"
+              fi
+              
+              # اضافه کردن جایگاه تبلیغ آخر مقاله (اگه نباشه)
+              if ! grep -q "ynpos-20477" "$file"; then
+                sed -i 's|</main>|<div class="yektanet-ad-wrapper" style="margin: 30px 0;"><div class="yn-bnr" id="ynpos-20477"></div></div>\n</main>|' "$file"
+                echo "✅ جایگاه 20477 به $file اضافه شد"
+              fi
+              
             fi
           done
       
@@ -35,6 +50,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Auto-add ads.js to articles"
+            git commit -m "Auto-add ads script and placements"
             git push
           fi
