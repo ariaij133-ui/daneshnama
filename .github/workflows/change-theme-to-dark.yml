@@ -11,24 +11,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Find Giscus code
+        run: |
+          echo "===== فایل‌هایی که کد giscus دارند ====="
+          grep -l "giscus" *.html || echo "هیچ فایلی پیدا نشد"
+          echo ""
+          echo "===== تم فعلی giscus ====="
+          grep -H "data-theme" *.html || echo "data-theme پیدا نشد"
+      
       - name: Change Giscus theme to dark
         run: |
+          changed=0
           for file in *.html; do
-            if [ "$file" != "index.html" ] && [ "$file" != "index-en.html" ]; then
-              
-              # تغییر تم Giscus از light به dark
+            if grep -q "giscus" "$file"; then
+              # تغییر هر حالت light به dark
               sed -i 's/data-theme="light"/data-theme="dark"/g' "$file"
               sed -i "s/data-theme='light'/data-theme='dark'/g" "$file"
-              
-              # اگر مقدار theme به شکل دیگری بود (مثلاً preferred_color_scheme)
               sed -i 's/data-theme="preferred_color_scheme"/data-theme="dark"/g' "$file"
+              sed -i 's/data-theme="noborder_light"/data-theme="noborder_dark"/g' "$file"
+              sed -i 's/data-theme="transparent"/data-theme="dark"/g' "$file"
               
-              echo "بررسی شد: $file"
+              echo "✅ بررسی شد: $file"
+              changed=$((changed + 1))
             fi
           done
-          
-          echo "----- بررسی نتیجه -----"
-          grep -l 'data-theme="dark"' *.html || echo "هیچ فایلی تغییر نکرد"
+          echo "تعداد فایل‌های giscus: $changed"
+      
+      - name: Verify changes
+        run: |
+          echo "===== تم جدید giscus ====="
+          grep -H "data-theme" *.html | grep giscus || grep -H "data-theme" *.html
       
       - name: Commit changes
         run: |
