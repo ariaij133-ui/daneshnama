@@ -1,6 +1,9 @@
 name: Add Article Ads
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -32,7 +35,7 @@ jobs:
                   continue
 
               if "</head>" not in text:
-                  print(f"Skipped (no </head>): {file}")
+                  print(f"Skipped: {file}")
                   continue
 
               text = text.replace(
@@ -57,5 +60,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Add ads script to article pages"
+          git commit -m "Add ads script to new articles"
           git push
