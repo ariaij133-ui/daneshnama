@@ -1,37 +1,39 @@
-name: Change Comments to Dark Mode
+name: Change Giscus Comments to Dark Mode
 
 on:
   workflow_dispatch:
 
 jobs:
-  change-comments:
+  change-giscus-theme:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
       
-      - name: Change comments color to dark
+      - name: Change Giscus theme to dark
         run: |
           for file in *.html; do
             if [ "$file" != "index.html" ] && [ "$file" != "index-en.html" ]; then
-              # تغییر color سفید به تیره فقط در خطوطی که شامل comment هستند
-              sed -i '/comment/I s/color:\s*#fff/color: #1a1a1a/gI' "$file"
-              sed -i '/comment/I s/color:\s*white/color: #1a1a1a/gI' "$file"
-              sed -i '/comment/I s/color:\s*#ffffff/color: #1a1a1a/gI' "$file"
               
-              # همچنین برای background اگر کامنت‌ها پس‌زمینه سفید دارند
-              sed -i '/comment/I s/background:\s*#fff/background: #1a1a1a/gI' "$file"
-              sed -i '/comment/I s/background:\s*white/background: #1a1a1a/gI' "$file"
+              # تغییر تم Giscus از light به dark
+              sed -i 's/data-theme="light"/data-theme="dark"/g' "$file"
+              sed -i "s/data-theme='light'/data-theme='dark'/g" "$file"
               
-              echo "تغییر کرد: $file"
+              # اگر مقدار theme به شکل دیگری بود (مثلاً preferred_color_scheme)
+              sed -i 's/data-theme="preferred_color_scheme"/data-theme="dark"/g' "$file"
+              
+              echo "بررسی شد: $file"
             fi
           done
+          
+          echo "----- بررسی نتیجه -----"
+          grep -l 'data-theme="dark"' *.html || echo "هیچ فایلی تغییر نکرد"
       
       - name: Commit changes
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add *.html
-          git diff --staged --quiet || git commit -m "Change comments color to dark mode"
+          git diff --staged --quiet || git commit -m "Change Giscus comments theme to dark"
           git push
