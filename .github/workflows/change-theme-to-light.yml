@@ -1,0 +1,43 @@
+name: Change Theme to Light Mode
+
+on:
+  workflow_dispatch:
+
+jobs:
+  change-theme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Change theme to light mode
+        run: |
+          for file in *.html; do
+            if [ "$file" != "index.html" ] && [ "$file" != "index-en.html" ]; then
+              
+              # ۱. تغییر تم پیش‌فرض از dark به light
+              sed -i "s|const savedTheme = localStorage.getItem('theme') || 'dark'|const savedTheme = localStorage.getItem('theme') || 'light'|g" "$file"
+              
+              # ۲. تغییر تم Giscus از dark به light
+              sed -i 's|data-theme="dark"|data-theme="light"|g' "$file"
+              
+              # ۳. تغییر تم پیش‌فرض توی کد اصلی (اگه وجود داشت)
+              sed -i "s|localStorage.getItem('theme') || 'dark'|localStorage.getItem('theme') || 'light'|g" "$file"
+              
+              echo "✅ تم $file به روشن تغییر کرد"
+            fi
+          done
+      
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add *.html
+          if git diff --staged --quiet; then
+            echo "⚠️ تغییری برای کامیت کردن نیست"
+          else
+            git commit -m "Change theme to light mode"
+            git push
+            echo "✅ تغییرات کامیت و پوش شد"
+          fi
