@@ -4,12 +4,12 @@ html{scroll-behavior:smooth}
 /* ===== تنظیمات کلی و فونت ===== */
 body{
     font-family:Tahoma,"Segoe UI",Arial,sans-serif;
-    background-color:#f5f7fa;
+    background-color:#0a0a0a;
     background-image: 
-        radial-gradient(circle at 10% 20%, rgba(0, 179, 107, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(0, 136, 204, 0.06) 0%, transparent 40%);
+        radial-gradient(circle at 10% 20%, rgba(0, 255, 136, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 200, 255, 0.05) 0%, transparent 40%);
     background-attachment: fixed;
-    color:#1a1a2e;
+    color:#d1d5db;
     line-height:2;
     min-height: 100vh;
     transition: background-color 0.4s ease, color 0.4s ease;
@@ -22,33 +22,19 @@ button,input{font-family:inherit;}
 header{
     position:relative;
     z-index:50;
-    background:rgba(255,255,255,0.9);
+    background:rgba(15,15,15,0.85);
     backdrop-filter:blur(16px);
     -webkit-backdrop-filter:blur(16px);
-    border-bottom:1px solid rgba(0, 179, 107, 0.3);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-bottom:1px solid rgba(0, 255, 136, 0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     transition: background 0.4s ease, border-color 0.4s ease;
 }
 nav{height:72px;display:flex;align-items:center;justify-content:space-between;}
 
-/* ===== لوگو ===== */
-.logo{
-    font-size:24px;font-weight:900;
-    background: linear-gradient(90deg, #00b36b, #0088cc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing:-0.5px;
-}
-.logo span{
-    -webkit-text-fill-color: #1a1a2e;
-    color: #1a1a2e;
-}
-
 /* ===== منو ===== */
 .menu{display:flex;gap:28px;list-style:none;font-size:14px;font-weight:700;}
 .menu a{
-    color:#1a1a2e;
+    color:#d1d5db;
     position: relative;
     padding-bottom: 4px;
 }
@@ -59,17 +45,17 @@ nav{height:72px;display:flex;align-items:center;justify-content:space-between;}
     right: 0;
     width: 0;
     height: 2px;
-    background: #00b36b;
+    background: #00ff88;
     transition: width 0.3s ease;
 }
-.menu a:hover{color:#00b36b;}
+.menu a:hover{color:#00ff88;}
 .menu a:hover::after{width: 100%;}
 
 /* ===== دکمه تغییر تم ===== */
 .theme-toggle{
-    background: rgba(255,255,255,0.8);
-    border: 1px solid rgba(0, 179, 107, 0.3);
-    color: #1a1a2e;
+    background: rgba(26,26,26,0.8);
+    border: 1px solid rgba(0,255,136,0.25);
+    color: #d1d5db;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -83,34 +69,34 @@ nav{height:72px;display:flex;align-items:center;justify-content:space-between;}
     margin-right: 16px;
 }
 .theme-toggle:hover{
-    border-color: #00b36b;
-    background: rgba(0, 179, 107, 0.1);
+    border-color: #00ff88;
+    background: rgba(0,255,136,0.1);
     transform: rotate(20deg) scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 179, 107, 0.3);
+    box-shadow: 0 0 20px rgba(0,255,136,0.3);
 }
 
 /* ===== بخش Hero ===== */
 .hero{
     position:relative;overflow:hidden;
-    background:rgba(255,255,255,0.6);
+    background:rgba(15,15,15,0.6);
     backdrop-filter: blur(10px);
     padding:80px 0 70px;
-    border-bottom:1px solid rgba(0, 179, 107, 0.2);
+    border-bottom:1px solid rgba(0,255,136,0.2);
 }
 .hero:before,.hero:after{
     content:"";position:absolute;border-radius:50%;
     filter:blur(60px);opacity:0.15;
 }
-.hero:before{width:400px;height:400px;background:#00b36b;left:-150px;top:-150px;}
-.hero:after{width:300px;height:300px;background:#0088cc;right:-120px;bottom:-120px;}
+.hero:before{width:400px;height:400px;background:#00ff88;left:-150px;top:-150px;}
+.hero:after{width:300px;height:300px;background:#00ccff;right:-120px;bottom:-120px;}
 .hero-content{position:relative;z-index:2;max-width:900px;margin:auto;text-align:center;}
 
 /* دکمه بالای هدر */
 .tag{
     display:inline-block;
-    color:#00b36b;
-    background:rgba(0, 179, 107, 0.1);
-    border:1px solid rgba(0, 179, 107, 0.4);
+    color:#00ff88;
+    background:rgba(0,255,136,0.1);
+    border:1px solid rgba(0,255,136,0.4);
     padding:6px 16px;
     border-radius:50px;
     font-size:13px;
@@ -126,19 +112,19 @@ h1{
     line-height:1.3;
     letter-spacing:-2px;
     margin-bottom:20px;
-    background: linear-gradient(135deg, #00b36b 0%, #0088cc 100%);
+    background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 900;
 }
 .highlight{
-    background: linear-gradient(135deg, #0088cc 0%, #00b36b 100%);
+    background: linear-gradient(135deg, #00ccff 0%, #00ff88 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-.hero p{font-size:18px;color:#5a6270;max-width:760px;margin:auto;}
+.hero p{font-size:18px;color:#a0a5ab;max-width:760px;margin:auto;}
 
 /* ===== عنوان بخش‌ها ===== */
 section{padding:80px 0;}
@@ -146,10 +132,10 @@ section{padding:80px 0;}
 .section-head h2{
     font-size:34px;
     line-height:1.4;
-    color:#00b36b;
-    text-shadow: 0 0 20px rgba(0, 179, 107, 0.15);
+    color:#00ff88;
+    text-shadow: 0 0 20px rgba(0,255,136,0.2);
 }
-.section-head p{color:#5a6270;margin-top:8px;font-size:16px;}
+.section-head p{color:#a0a5ab;margin-top:8px;font-size:16px;}
 
 /* ===== جستجو ===== */
 .search{
@@ -161,37 +147,37 @@ section{padding:80px 0;}
 .search input{
     flex:1;
     padding:16px 20px;
-    border:1px solid rgba(0,0,0,0.1);
+    border:1px solid rgba(255,255,255,0.1);
     border-radius:12px;
     font-size:15px;
     outline:none;
-    background:rgba(255,255,255,0.9);
-    color:#1a1a2e;
+    background:rgba(26,26,26,0.8);
+    color:#d1d5db;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
     font-family: inherit;
 }
 .search input:focus{
-    border-color:#00b36b;
-    box-shadow:0 0 0 4px rgba(0, 179, 107, 0.15);
-    background:#ffffff;
+    border-color:#00ff88;
+    box-shadow:0 0 0 4px rgba(0,255,136,0.15);
+    background:rgba(26,26,26,1);
 }
 .search button{
     border:0;
     border-radius:12px;
-    background:linear-gradient(135deg, #00b36b, #00cc6a);
-    color:#ffffff;
+    background:linear-gradient(135deg, #00ff88, #00cc6a);
+    color:#0a0a0a;
     padding:0 28px;
     font-weight:bold;
     cursor:pointer;
     font-size: 15px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 179, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(0,255,136,0.3);
     font-family: inherit;
 }
 .search button:hover{
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 179, 107, 0.5);
+    box-shadow: 0 6px 20px rgba(0,255,136,0.5);
 }
 
 /* ===== نتایج جستجو ===== */
@@ -202,8 +188,8 @@ section{padding:80px 0;}
 }
 .result{
     display:block;
-    background:rgba(255,255,255,0.8);
-    border:1px solid rgba(0,0,0,0.08);
+    background:rgba(26,26,26,0.7);
+    border:1px solid rgba(255,255,255,0.08);
     border-radius:12px;
     padding:14px 18px;
     margin:8px 0;
@@ -211,17 +197,17 @@ section{padding:80px 0;}
     backdrop-filter: blur(5px);
 }
 .result:hover{
-    border-color:#00b36b;
-    background:#ffffff;
+    border-color:#00ff88;
+    background:rgba(30,30,30,0.9);
     transform: translateX(-5px);
-    box-shadow: 0 4px 15px rgba(0, 179, 107, 0.1);
+    box-shadow: 0 4px 15px rgba(0,255,136,0.1);
 }
-.result b{display:block;color:#00b36b;font-size:16px;}
-.result small{display:block;color:#0088cc;font-size:12px;margin:2px 0;}
-.result span{display:block;color:#5a6270;font-size:13px;}
+.result b{display:block;color:#00ff88;font-size:16px;}
+.result small{display:block;color:#00ccff;font-size:12px;margin:2px 0;}
+.result span{display:block;color:#a0a5ab;font-size:13px;}
 .no{
     text-align:center;
-    color:#5a6270;
+    color:#a0a5ab;
     padding:15px;
 }
 
@@ -234,9 +220,9 @@ section{padding:80px 0;}
     margin-top:30px;
 }
 .filters button{
-    background: rgba(255,255,255,0.8);
-    color: #1a1a2e;
-    border: 1px solid rgba(0, 179, 107, 0.3);
+    background: rgba(26, 26, 26, 0.8);
+    color: #d1d5db;
+    border: 1px solid rgba(0, 255, 136, 0.25);
     padding: 10px 20px;
     border-radius: 12px;
     font-size: 14px;
@@ -247,20 +233,20 @@ section{padding:80px 0;}
     font-family: inherit;
 }
 .filters button:hover{
-    border-color: #00b36b;
-    color: #00b36b;
-    background: rgba(0, 179, 107, 0.1);
+    border-color: #00ff88;
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 179, 107, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.2);
 }
 
 /* ===== دسته‌های علمی ===== */
 .categories h2{
     text-align: center;
     font-size: 34px;
-    color: #00b36b;
+    color: #00ff88;
     margin-bottom: 10px;
-    text-shadow: 0 0 20px rgba(0, 179, 107, 0.15);
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 .categoryGrid{
     display: flex;
@@ -270,9 +256,9 @@ section{padding:80px 0;}
     margin-top: 30px;
 }
 .categoryGrid button{
-    background: rgba(255,255,255,0.8);
-    color: #1a1a2e;
-    border: 1px solid rgba(0, 179, 107, 0.3);
+    background: rgba(26, 26, 26, 0.8);
+    color: #d1d5db;
+    border: 1px solid rgba(0, 255, 136, 0.25);
     padding: 12px 22px;
     border-radius: 12px;
     font-size: 14px;
@@ -283,11 +269,11 @@ section{padding:80px 0;}
     font-family: inherit;
 }
 .categoryGrid button:hover{
-    border-color: #00b36b;
-    color: #00b36b;
-    background: rgba(0, 179, 107, 0.1);
+    border-color: #00ff88;
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 179, 107, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.2);
 }
 
 /* ===== عنوان بخش موضوعات ===== */
@@ -297,11 +283,11 @@ section{padding:80px 0;}
 }
 .head h2{
     font-size: 34px;
-    color: #00b36b;
-    text-shadow: 0 0 20px rgba(0, 179, 107, 0.15);
+    color: #00ff88;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 .head p{
-    color: #5a6270;
+    color: #a0a5ab;
     margin-top: 8px;
     font-size: 16px;
 }
@@ -315,13 +301,13 @@ section{padding:80px 0;}
 
 .card, .topic-card, .box, 
 article, .item, .post {
-    background: rgba(255,255,255,0.8);
+    background:rgba(26,26,26,0.6);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 179, 107, 0.2);
+    border: 1px solid rgba(0,255,136,0.15);
     border-radius: 16px;
     padding: 24px;
     margin-bottom: 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
@@ -334,17 +320,17 @@ article, .item, .post {
     right: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, transparent, #00b36b, transparent);
+    background: linear-gradient(90deg, transparent, #00ff88, transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .card:hover, .topic-card:hover, .box:hover,
 article:hover, .item:hover, .post:hover {
-    border-color: rgba(0, 179, 107, 0.6);
-    box-shadow: 0 8px 30px rgba(0, 179, 107, 0.15);
+    border-color: rgba(0,255,136,0.6);
+    box-shadow: 0 8px 30px rgba(0,255,136,0.15);
     transform: translateY(-5px);
-    background: #ffffff;
+    background:rgba(30,30,30,0.8);
 }
 .card:hover::before, .topic-card:hover::before, article:hover::before {
     opacity: 1;
@@ -352,22 +338,22 @@ article:hover, .item:hover, .post:hover {
 
 .card h2, .card h3, .topic-card h2, .topic-card h3,
 article h2, article h3, .item h2, .item h3 {
-    color: #00b36b !important;
+    color: #00ff88 !important;
     margin-bottom: 12px;
     font-size: 1.3em;
     font-weight: 800;
-    text-shadow: 0 0 10px rgba(0, 179, 107, 0.1);
+    text-shadow: 0 0 10px rgba(0,255,136,0.1);
 }
 
 .card p, .topic-card p, article p, .item p {
-    color: #1a1a2e !important;
+    color: #d1d5db !important;
     margin-bottom: 12px;
     line-height: 1.9;
     font-size: 15px;
 }
 
 .card a, .topic-card a, article a, .item a {
-    color: #00b36b !important;
+    color: #00ff88 !important;
     font-weight: bold;
     display: inline-flex;
     align-items: center;
@@ -375,21 +361,21 @@ article h2, article h3, .item h2, .item h3 {
     margin-top: 8px;
     padding: 6px 12px;
     border-radius: 8px;
-    background: rgba(0, 179, 107, 0.08);
+    background: rgba(0,255,136,0.08);
     transition: all 0.3s ease;
     font-size: 14px;
 }
 .card a:hover, .topic-card a:hover, article a:hover, .item a:hover {
-    background: rgba(0, 179, 107, 0.2);
+    background: rgba(0,255,136,0.2);
     transform: translateX(-5px);
-    box-shadow: 0 0 15px rgba(0, 179, 107, 0.2);
+    box-shadow: 0 0 15px rgba(0,255,136,0.2);
 }
 
 .card > span:first-of-type {
     display: inline-block;
-    color: #0088cc;
-    background: rgba(0, 136, 204, 0.08);
-    border: 1px solid rgba(0, 136, 204, 0.25);
+    color: #00ccff;
+    background: rgba(0, 204, 255, 0.08);
+    border: 1px solid rgba(0, 204, 255, 0.25);
     padding: 3px 10px;
     border-radius: 50px;
     font-size: 11px;
@@ -402,12 +388,12 @@ article h2, article h3, .item h2, .item h3 {
     text-align: center;
 }
 .about h2{
-    color: #00b36b;
+    color: #00ff88;
     margin-bottom: 15px;
     font-size: 28px;
 }
 .about p{
-    color: #5a6270;
+    color: #a0a5ab;
     max-width: 700px;
     margin: auto;
 }
@@ -416,10 +402,10 @@ article h2, article h3, .item h2, .item h3 {
 footer {
     text-align: center;
     padding: 30px 0;
-    border-top: 1px solid rgba(0, 179, 107, 0.2);
-    color: #5a6270;
+    border-top: 1px solid rgba(0,255,136,0.15);
+    color: #a0a5ab;
     font-size: 14px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(10,10,10,0.8);
     backdrop-filter: blur(10px);
     transition: background 0.4s ease;
 }
@@ -429,173 +415,172 @@ footer {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #f5f7fa;
+    background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
-    background: #b0b8c4;
+    background: #2e7d32;
     border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #00b36b;
+    background: #00ff88;
 }
 
 /* ========================================================= */
-/* ===== تم تیره (Dark Mode) ===== */
+/* ===== تم روشن (Light Mode) ===== */
 /* ========================================================= */
-body.dark-mode{
-    background-color:#0a0a0a;
+body.light-mode{
+    background-color:#f5f7fa;
     background-image: 
-        radial-gradient(circle at 10% 20%, rgba(0, 255, 136, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(0, 200, 255, 0.05) 0%, transparent 40%);
-    color:#d1d5db;
+        radial-gradient(circle at 10% 20%, rgba(0, 179, 107, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 136, 204, 0.06) 0%, transparent 40%);
+    color:#1a1a2e;
 }
-body.dark-mode header{
-    background:rgba(15,15,15,0.85);
-    border-bottom-color: rgba(0, 255, 136, 0.3);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+body.light-mode header{
+    background:rgba(255,255,255,0.9);
+    border-bottom-color: rgba(0, 179, 107, 0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
-body.dark-mode .logo span{
-    -webkit-text-fill-color: #d1d5db;
-    color: #d1d5db;
+body.light-mode .logo-text b{
+    -webkit-text-fill-color: #1a1a2e;
+    color: #1a1a2e;
 }
-body.dark-mode .menu a{
-    color:#d1d5db;
+body.light-mode .menu a{
+    color:#1a1a2e;
 }
-body.dark-mode .hero{
-    background:rgba(15,15,15,0.6);
-    border-bottom-color: rgba(0,255,136,0.2);
+body.light-mode .hero{
+    background:rgba(255,255,255,0.6);
+    border-bottom-color: rgba(0, 179, 107, 0.2);
 }
-body.dark-mode .hero p{
-    color:#a0a5ab;
+body.light-mode .hero p{
+    color:#5a6270;
 }
-body.dark-mode .tag{
-    color:#00ff88;
-    background:rgba(0,255,136,0.1);
-    border-color: rgba(0,255,136,0.4);
+body.light-mode .tag{
+    color:#00b36b;
+    background:rgba(0, 179, 107, 0.1);
+    border-color: rgba(0, 179, 107, 0.4);
 }
-body.dark-mode h1{
-    background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+body.light-mode h1{
+    background: linear-gradient(135deg, #00b36b 0%, #0088cc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-body.dark-mode .highlight{
-    background: linear-gradient(135deg, #00ccff 0%, #00ff88 100%);
+body.light-mode .highlight{
+    background: linear-gradient(135deg, #0088cc 0%, #00b36b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-body.dark-mode .search input{
-    background: rgba(26,26,26,0.8);
-    color: #d1d5db;
-    border-color: rgba(255,255,255,0.1);
+body.light-mode .search input{
+    background: rgba(255,255,255,0.9);
+    color: #1a1a2e;
+    border-color: rgba(0,0,0,0.1);
 }
-body.dark-mode .search input:focus{
-    background: rgba(26,26,26,1);
-    border-color: #00ff88;
-    box-shadow: 0 0 0 4px rgba(0,255,136,0.15);
+body.light-mode .search input:focus{
+    background: #ffffff;
+    border-color: #00b36b;
+    box-shadow: 0 0 0 4px rgba(0, 179, 107, 0.15);
 }
-body.dark-mode .search button{
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    color: #0a0a0a;
+body.light-mode .search button{
+    background: linear-gradient(135deg, #00b36b, #00cc6a);
 }
-body.dark-mode .filters button,
-body.dark-mode .categoryGrid button{
-    background: rgba(26, 26, 26, 0.8);
-    color: #d1d5db;
-    border-color: rgba(0, 255, 136, 0.25);
+body.light-mode .filters button,
+body.light-mode .categoryGrid button{
+    background: rgba(255,255,255,0.8);
+    color: #1a1a2e;
+    border-color: rgba(0, 179, 107, 0.3);
 }
-body.dark-mode .filters button:hover,
-body.dark-mode .categoryGrid button:hover{
-    border-color: #00ff88;
-    color: #00ff88;
-    background: rgba(0, 255, 136, 0.1);
+body.light-mode .filters button:hover,
+body.light-mode .categoryGrid button:hover{
+    border-color: #00b36b;
+    color: #00b36b;
+    background: rgba(0, 179, 107, 0.1);
 }
-body.dark-mode .categories h2,
-body.dark-mode .head h2,
-body.dark-mode .section-head h2{
-    color: #00ff88;
+body.light-mode .categories h2,
+body.light-mode .head h2,
+body.light-mode .section-head h2{
+    color: #00b36b;
 }
-body.dark-mode .head p,
-body.dark-mode .section-head p{
-    color: #a0a5ab;
+body.light-mode .head p,
+body.light-mode .section-head p{
+    color: #5a6270;
 }
-body.dark-mode .card,
-body.dark-mode .topic-card,
-body.dark-mode article,
-body.dark-mode .item{
-    background: rgba(26,26,26,0.6);
-    border-color: rgba(0,255,136,0.15);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+body.light-mode .card,
+body.light-mode .topic-card,
+body.light-mode article,
+body.light-mode .item{
+    background: rgba(255,255,255,0.8);
+    border-color: rgba(0, 179, 107, 0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
-body.dark-mode .card:hover,
-body.dark-mode .topic-card:hover,
-body.dark-mode article:hover,
-body.dark-mode .item:hover{
-    background: rgba(30,30,30,0.8);
-    border-color: rgba(0,255,136,0.6);
-    box-shadow: 0 8px 30px rgba(0,255,136,0.15);
+body.light-mode .card:hover,
+body.light-mode .topic-card:hover,
+body.light-mode article:hover,
+body.light-mode .item:hover{
+    background: #ffffff;
+    border-color: rgba(0, 179, 107, 0.6);
+    box-shadow: 0 8px 30px rgba(0, 179, 107, 0.15);
 }
-body.dark-mode .card h2,
-body.dark-mode .card h3,
-body.dark-mode article h2,
-body.dark-mode article h3{
-    color: #00ff88 !important;
+body.light-mode .card h2,
+body.light-mode .card h3,
+body.light-mode article h2,
+body.light-mode article h3{
+    color: #00b36b !important;
 }
-body.dark-mode .card p,
-body.dark-mode article p{
-    color: #d1d5db !important;
+body.light-mode .card p,
+body.light-mode article p{
+    color: #1a1a2e !important;
 }
-body.dark-mode .card a,
-body.dark-mode article a{
-    color: #00ff88 !important;
-    background: rgba(0,255,136,0.08);
+body.light-mode .card a,
+body.light-mode article a{
+    color: #00b36b !important;
+    background: rgba(0, 179, 107, 0.08);
 }
-body.dark-mode .card a:hover,
-body.dark-mode article a:hover{
-    background: rgba(0,255,136,0.2);
+body.light-mode .card a:hover,
+body.light-mode article a:hover{
+    background: rgba(0, 179, 107, 0.2);
 }
-body.dark-mode .card > span:first-of-type{
-    color: #00ccff;
-    background: rgba(0, 204, 255, 0.08);
-    border-color: rgba(0, 204, 255, 0.25);
+body.light-mode .card > span:first-of-type{
+    color: #0088cc;
+    background: rgba(0, 136, 204, 0.08);
+    border-color: rgba(0, 136, 204, 0.25);
 }
-body.dark-mode .result{
-    background: rgba(26,26,26,0.7);
-    border-color: rgba(255,255,255,0.08);
+body.light-mode .result{
+    background: rgba(255,255,255,0.8);
+    border-color: rgba(0,0,0,0.08);
 }
-body.dark-mode .result:hover{
-    background: rgba(30,30,30,0.9);
-    border-color: #00ff88;
+body.light-mode .result:hover{
+    background: #ffffff;
+    border-color: #00b36b;
 }
-body.dark-mode .result b{ color: #00ff88; }
-body.dark-mode .result small{ color: #00ccff; }
-body.dark-mode .result span{ color: #a0a5ab; }
-body.dark-mode .about h2{ color: #00ff88; }
-body.dark-mode .about p{ color: #a0a5ab; }
-body.dark-mode footer{
-    background: rgba(10,10,10,0.8);
-    border-top-color: rgba(0,255,136,0.15);
-    color: #a0a5ab;
+body.light-mode .result b{ color: #00b36b; }
+body.light-mode .result small{ color: #0088cc; }
+body.light-mode .result span{ color: #5a6270; }
+body.light-mode .about h2{ color: #00b36b; }
+body.light-mode .about p{ color: #5a6270; }
+body.light-mode footer{
+    background: rgba(255,255,255,0.9);
+    border-top-color: rgba(0, 179, 107, 0.2);
+    color: #5a6270;
 }
-body.dark-mode ::-webkit-scrollbar-track{
-    background: #0a0a0a;
+body.light-mode ::-webkit-scrollbar-track{
+    background: #f5f7fa;
 }
-body.dark-mode ::-webkit-scrollbar-thumb{
-    background: #2e7d32;
+body.light-mode ::-webkit-scrollbar-thumb{
+    background: #b0b8c4;
 }
-body.dark-mode ::-webkit-scrollbar-thumb:hover{
-    background: #00ff88;
+body.light-mode ::-webkit-scrollbar-thumb:hover{
+    background: #00b36b;
 }
-body.dark-mode .theme-toggle{
-    background: rgba(26,26,26,0.8);
-    color: #d1d5db;
-    border-color: rgba(0,255,136,0.25);
+body.light-mode .theme-toggle{
+    background: rgba(255,255,255,0.8);
+    color: #1a1a2e;
+    border-color: rgba(0, 179, 107, 0.3);
 }
-body.dark-mode .theme-toggle:hover{
-    border-color: #00ff88;
-    background: rgba(0,255,136,0.1);
-    box-shadow: 0 0 20px rgba(0,255,136,0.3);
+body.light-mode .theme-toggle:hover{
+    border-color: #00b36b;
+    background: rgba(0, 179, 107, 0.1);
+    box-shadow: 0 0 20px rgba(0, 179, 107, 0.3);
 }
 
 /* ===== ریسپانسیو موبایل ===== */
@@ -618,4 +603,4 @@ body.dark-mode .theme-toggle:hover{
         left: 16px;
         margin-right: 0;
     }
-    }
+}
