@@ -15,14 +15,14 @@ jobs:
         run: |
           for file in *.html; do
             if [ "$file" != "index.html" ] && [ "$file" != "index-en.html" ]; then
+              # تغییر color سفید به تیره فقط در خطوطی که شامل comment هستند
+              sed -i '/comment/I s/color:\s*#fff/color: #1a1a1a/gI' "$file"
+              sed -i '/comment/I s/color:\s*white/color: #1a1a1a/gI' "$file"
+              sed -i '/comment/I s/color:\s*#ffffff/color: #1a1a1a/gI' "$file"
               
-              # تغییر رنگ کامنت‌ها از سفید به تیره
-              # این دستور CSS مربوط به کامنت‌ها را تغییر می‌دهد
-              sed -i 's/\.comment[^{]*{[^}]*color:\s*#fff/\.comment\1{color: #1a1a1a/g' "$file"
-              sed -i 's/\.comment[^{]*{[^}]*color:\s*white/\.comment\1{color: #1a1a1a/g' "$file"
-              
-              # اگر کامنت‌ها با کلاس دیگری هستند، اینجا اضافه کنید
-              # مثلاً .comments یا #comments یا .comment-box
+              # همچنین برای background اگر کامنت‌ها پس‌زمینه سفید دارند
+              sed -i '/comment/I s/background:\s*#fff/background: #1a1a1a/gI' "$file"
+              sed -i '/comment/I s/background:\s*white/background: #1a1a1a/gI' "$file"
               
               echo "تغییر کرد: $file"
             fi
