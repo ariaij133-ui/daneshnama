@@ -1,30 +1,88 @@
-name: Add Ads Script
+name: Add Yektanet Ads to Articles
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - '*.html'
+      - 'ads.js'
+      - '.github/workflows/add-ads.yml'
   workflow_dispatch:
 
 jobs:
   add-ads:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Add ads script
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add Yektanet script and ad placements
         run: |
-          for f in *.html; do
-            if [ "$f" != "index.html" ] && [ "$f" != "index-en.html" ]; then
-              if ! grep -q "ads.js" "$f"; then
-                sed -i 's|</head>|<script src="ads.js" defer></script>\n</head>|' "$f"
-              fi
+          for file in *.html; do
+
+            # صفحه اصلی و نسخه انگلیسی را تغییر نده
+            if [ "$file" = "index.html" ] || [ "$file" = "index-en.html" ]; then
+              continue
             fi
+
+            echo "Processing: $file"
+
+            # ==========================================
+            # 1. اضافه کردن اسکریپت اصلی یکتانت
+            # ==========================================
+            if ! grep -q "cdn.yektanet.com/superscript-v2/XcgZyRjV/native-48385" "$file"; then
+
+              sed -i 's|</head>|<script>\n!function(e,t,n){e.yektanetAnalyticsObject=n,e[n]=e[n]||function(){e[n].q.push(arguments)},e[n].q=e[n].q||[];var a=t.getElementsByTagName("head")[0],r=new Date,c="https://cdn.yektanet.com/superscript-v2/XcgZyRjV/native-48385/yn_pub.js?v="+r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),s=t.createElement("link");s.rel="preload",s.as="script",s.href=c,a.appendChild(s);var l=t.createElement("script");l.async=!0,l.src=c,a.appendChild(l)}(window,document,"yektanet");\n</script>\n</head>|' "$file"
+
+              echo "Yektanet main script added to $file"
+            fi
+
+            # ==========================================
+            # 2. اضافه کردن ads.js
+            # ==========================================
+            if ! grep -q 'src="ads.js"' "$file"; then
+
+              sed -i 's|</head>|<script src="ads.js" defer></script>\n</head>|' "$file"
+
+              echo "ads.js added to $file"
+            fi
+
+            # ==========================================
+            # 3. جایگاه تبلیغ 20500
+            # ==========================================
+            if ! grep -q "ynpos-20500" "$file"; then
+
+              sed -i 's|</main>|<div class="yektanet-ad-wrapper" style="margin:30px 0;padding:15px;text-align:center;"><div class="yn-bnr" id="ynpos-20500"></div></div>\n</main>|' "$file"
+
+              echo "Ad placement 20500 added to $file"
+            fi
+
+            # ==========================================
+            # 4. جایگاه تبلیغ 20501
+            # ==========================================
+            if ! grep -q "ynpos-20501" "$file"; then
+
+              sed -i 's|</main>|<div class="yektanet-ad-wrapper" style="margin:30px 0;padding:15px;text-align:center;"><div class="yn-bnr" id="ynpos-20501"></div></div>\n</main>|' "$file"
+
+              echo "Ad placement 20501 added to $file"
+            fi
+
           done
-      - name: Commit
+
+      - name: Commit changes
         run: |
-          git config user.name "github-actions"
+          git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+
           git add *.html
-          git diff --staged --quiet || git commit -m "Add ads script"
-          git push
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add Yektanet ads to articles"
+            git push
+          fi
